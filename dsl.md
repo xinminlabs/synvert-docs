@@ -9,7 +9,7 @@ Synvert provides a simple dsl to define a snippet.
 Synvert::Rewriter.new "group_name", "snippet_name" do
   description "description"
 
-  if_gem gem_name, {gte: gem_version}
+  if_gem gem_name, { gte: gem_version }
 
   within_file file_pattern do
     within_node rules do
@@ -53,12 +53,12 @@ is less than, greater than or equal to the version in `if_gem`,
 the snippet will be executed, otherwise, the snippet will be ignored.
 
 ```ruby
-if_gem 'factory_girl', {eq: '2.0.0'}
-if_gem 'factory_girl', {ne: '2.0.0'}
-if_gem 'factory_girl', {gt: '2.0.0'}
-if_gem 'factory_girl', {lt: '2.0.0'}
-if_gem 'factory_girl', {gte: '2.0.0'}
-if_gem 'factory_girl', {lte: '2.0.0'}
+if_gem 'factory_girl', { eq: '2.0.0' }
+if_gem 'factory_girl', { ne: '2.0.0' }
+if_gem 'factory_girl', { gt: '2.0.0' }
+if_gem 'factory_girl', { lt: '2.0.0' }
+if_gem 'factory_girl', { gte: '2.0.0' }
+if_gem 'factory_girl', { lte: '2.0.0' }
 ```
 
 ### add\_file
@@ -220,7 +220,7 @@ end
 Replace erb statemet code with expression code.
 
 ```ruby
-with_node type: 'block', caller: {type: 'send', receiver: nil, message: 'form_for'} do
+with_node type: 'block', caller: { type: 'send', receiver: nil, message: 'form_for' } do
   replace_erb_stmt_with_expr
 end
 ```
