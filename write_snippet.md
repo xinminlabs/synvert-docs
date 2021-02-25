@@ -20,5 +20,5 @@ If you don't want to write the snippet by yourself, feel free to [open
 an issue][3] to us, we can help you write it.
 
 [1]: https://github.com/xinminlabs/synvert-snippets
-[2]: https://github.com/xinminlabs/synvert-snippets/blob/master/spec/factory_girl/syntax_methods_spec.rb
+[2]: https://github.com/xinminlabs/synvert-snippets/blob/master/spec/factory_bot/use_short_syntax_spec.rb
 [3]: https://github.com/xinminlabs/synvert-snippets/issues
