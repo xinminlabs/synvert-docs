@@ -225,6 +225,16 @@ with_node type: 'send', message: 'rename_index' do
 end
 ```
 
+### delete
+
+Delete the child nodes
+
+```ruby
+with_node type: 'send', message: 'flatten' do
+  delete :dot, :mesage
+end
+```
+
 ### replace\_erb\_stmt\_with\_expr
 
 Replace erb statemet code with expression code.
