@@ -24,12 +24,14 @@ $ synvert -h
 Usage: synvert [project_path]
     -d, --load SNIPPET_PATHS         load custom snippets, snippet paths can be local file path or remote http url
     -l, --list                       list all available snippets
-    -o, --open SNIPPET_NAME          open a snippet in editor
+    -o, --open SNIPPET_NAME          Open a snippet
     -q, --query QUERY                query specified snippets
         --skip FILE_PATTERNS         skip specified files or directories, separated by comma, e.g. app/models/post.rb,vendor/plugins/**/*.rb
     -s, --show SNIPPET_NAME          show specified snippet description, SNIPPET_NAME is combined by group and name, e.g. ruby/new_hash_syntax
         --sync                       sync snippets
-    -r, --run SNIPPET_NAMES          run specified snippets, each SNIPPET_NAME is combined by group and name, e.g. ruby/new_hash_syntax,ruby/new_lambda_syntax
+    -r, --run SNIPPET_NAME           run specified snippet, e.g. ruby/new_hash_syntax
+    -g, --generate NEW_SNIPPET_NAME  generate a new snippet
+    -f, --format FORMAT              output format
     -v, --version                    show this version
 ```
 
@@ -79,6 +81,14 @@ after using synvert, you can use check what changes synvert does to
 your ruby code.
 
 You can write your own snippets then load them by `--load`.
+
+##### Generate a snippet
+
+Generate a new snippet
+
+```
+$ synvert -g foo/bar
+```
 
 ### Dependencies
 
