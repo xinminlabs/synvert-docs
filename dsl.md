@@ -205,6 +205,16 @@ replace_with "create({{arguments}})"
 {% endraw %}
 ```
 
+### replace
+
+Reaplce child node with the code.
+
+```ruby
+{% raw %}
+replace :message, with: 'tr'
+{% endraw %}
+```
+
 ### remove
 
 Remove the current node.
