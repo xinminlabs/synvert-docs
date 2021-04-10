@@ -56,7 +56,7 @@ $ synvert -l
 Describe what a snippet does.
 
 ```
-$ synvert -s factory_girl/use_short_syntax
+$ synvert -s factory_bot/use_short_syntax
 ```
 
 ##### Open a snippet
@@ -65,7 +65,7 @@ Open a snippet in your editor, editor is defined in
 `ENV['SNIPPET_EDITOR']` or `ENV['EDITOR']`
 
 ```
-$ synvert -o factory_girl/use_short_syntax
+$ synvert -o factory_bot/use_short_syntax
 ```
 
 ##### Run a snippet
@@ -73,7 +73,7 @@ $ synvert -o factory_girl/use_short_syntax
 Run a snippet, analyze and then change code.
 
 ```
-$ synvert -r factory_girl/use_short_syntax ~/Sites/railsbp/rails-bestpractices.com
+$ synvert -r factory_bot/use_short_syntax ~/Sites/xinminlabs/awesomecode.io
 ```
 
 It's recommended that you use version control software like [git][3],
@@ -87,7 +87,7 @@ You can write your own snippets then load them by `--load`.
 Generate a new snippet
 
 ```
-$ synvert -g foo/bar
+$ synvert -g group/name
 ```
 
 ### Dependencies

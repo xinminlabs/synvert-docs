@@ -29,7 +29,7 @@ Synvert::Rewriter.new "group_name", "snippet_name" do
 end
 ```
 
-### describe
+### description
 
 Describe what the snippet does.
 
@@ -66,12 +66,12 @@ if_gem 'factory_girl', '<= 2.0.0'
 Add a new file and write content.
 
 ```ruby
-content =<<- EOF
-ActiveSupport.on_load(:action_controller) do
-  wrap_parameters format: [:json]
-end
-EOF
-add_file 'config/initializers/wrap_parameters.rb', content.strip
+content = <<~EOS
+  ActiveSupport.on_load(:action_controller) do
+    wrap_parameters format: [:json]
+  end
+EOS
+add_file 'config/initializers/wrap_parameters.rb', content
 ```
 
 ### remove\_file

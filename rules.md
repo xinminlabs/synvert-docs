@@ -32,7 +32,7 @@ it can compare nested key / value pairs, like
 
 ```ruby
 # matches config.activerecord.identity_map = ...
-type: 'send', receiver: {type: 'send', receiver: {type: 'send', message: 'config'}, message: 'active_record'}, message: 'identity_map='
+type: 'send', receiver: { type: 'send', receiver: { type: 'send', message: 'config' }, message: 'active_record' }, message: 'identity_map='
 ```
 
 ## Source code to ast node
@@ -61,12 +61,12 @@ $ ruby-parse -e 'RSpec.configure do |config|; include EmailSpec::Helpers; includ
 ```ruby
 require 'parser/current'
 
-code =<<-EOF
-RSepc.configure do |config|
-  include EmailSpec::Helpers
-  include EmailSpec::Matchers
-end
-EOF
+code = <<~EOS
+  RSepc.configure do |config|
+    include EmailSpec::Helpers
+    include EmailSpec::Matchers
+  end
+EOS
 
 Parser::CurrentRuby.parse code
 

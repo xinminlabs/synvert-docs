@@ -113,7 +113,7 @@ end
 ```
 
 We already insert `FactoryGirl::Syntax::Methods` module, then we can
-replace `FactoryGirl.create` with `create` now.
+delete `FactoryGirl` and `.` from `FactoryGirl.create` now.
 
 ```ruby
 {% raw %}
@@ -124,9 +124,7 @@ Synvert::Rewriter.new 'factory_girl', 'use_short_syntax' do
     # find all files in test/, spec/ and features/
     within_files file_pattern do
       with_node type: 'send', receiver: 'FactoryGirl', message: 'create' do
-        # for FactoryGirl.create(:post, title: 'post'),
-        # arguments are `:post, title: 'post'`
-        replace_with "create({{arguments}})"
+        delete :receiver, :dot
       end
     end
   end
@@ -146,7 +144,7 @@ Synvert::Rewriter.new 'factory_girl', 'use_short_syntax' do
       %w(create build attributes_for build_stubbed create_list build_list
           create_pair build_pair).each do |message|
         with_node type: 'send', receiver: 'FactoryGirl', message: message do
-          replace_with "#{message}({{arguments}})"
+          delete :receiver, :dot
         end
       end
     end
