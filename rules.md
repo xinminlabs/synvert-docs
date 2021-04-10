@@ -374,7 +374,7 @@ node = Parser::CurrentRuby.parse "config.middleware.swap ActionDispatch::ShowExc
 matches
 
 ```ruby
-type: 'send', arguments: {any: 'Lifo::ShowExceptions'}
+type: 'send', arguments: { any: 'Lifo::ShowExceptions' }
 ```
 
 ### not
@@ -391,7 +391,7 @@ node = Parser::CurrentRuby.parse "obj.should matcher"
 matches
 
 ```ruby
-type: 'send', receiver: {not: nil}, message: 'should'
+type: 'send', receiver: { not: nil }, message: 'should'
 ```
 
 If you want to get more, please read [here][1].
