@@ -377,9 +377,29 @@ matches
 type: 'send', arguments: { any: 'Lifo::ShowExceptions' }
 ```
 
-### not
+### any_value
 
-Not matches.
+Node value matches any value but nil.
+
+```ruby
+node = Parser::CurrentRuby.parse "render nothing: true, status: :creatd"
+# s(:send, nil, :render,
+#   s(:hash,
+#     s(:pair,
+#       s(:sym, :nothing),
+#       s(:true)),
+#     s(:pair,
+#       s(:sym, :status),
+#       s(:sym, :creatd))))
+```
+
+matches
+
+```ruby
+type: 'hash', nothing_value: 'true', status_value: any_value
+```
+
+### not
 
 ```ruby
 node = Parser::CurrentRuby.parse "obj.should matcher"
@@ -392,6 +412,36 @@ matches
 
 ```ruby
 type: 'send', receiver: { not: nil }, message: 'should'
+```
+
+### in
+
+```ruby
+node = Parser::CurrentRuby.parse "FactoryBot.create(:user)"
+# s(:send,
+#   s(:const, nil, :FactoryBot), :create,
+#     s(:sym, :user))
+```
+
+matches
+
+```ruby
+type: 'send', receiver: 'FactoryBot', message: { in: [:create, :build] }
+```
+
+### not_in
+
+```ruby
+node = Parser::CurrentRuby.parse "FactoryBot.create(:user)"
+# s(:send,
+#   s(:const, nil, :FactoryBot), :create,
+#     s(:sym, :user))
+```
+
+matches
+
+```ruby
+type: 'send', receiver: 'FactoryBot', message: { not_in: [:save, :update] }
 ```
 
 If you want to get more, please read [here][1].
