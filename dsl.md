@@ -22,7 +22,7 @@ Synvert::Rewriter.new "group_name", "snippet_name" do
   within_files files_pattern do
     with_node rules do
       unless_exist_node rule do
-        insert code
+        append code
       end
     end
   end
@@ -176,12 +176,12 @@ Add the code at the bottom of the current node body.
 append 'config.eager_load = false'
 ```
 
-### insert
+### prepend
 
 Add the code at the top of the current node body.
 
 ```ruby
-insert "include FactoryGirl::Syntax::Methods"
+prepend "include FactoryGirl::Syntax::Methods"
 ```
 
 ### insert\_after

@@ -14,7 +14,7 @@ Adds `include FactoryGirl::Syntax::Methods` to class
 Synvert::Rewriter.new 'factory_girl', 'use_short_syntax' do
   within_file 'test/test_helper.rb' do
     with_node type: 'class', name: 'Test::Unit::TestCase' do
-      insert 'include FactoryGirl::Syntax::Methods'
+      prepend 'include FactoryGirl::Syntax::Methods'
     end
   end
 end
@@ -30,15 +30,15 @@ Synvert::Rewriter.new 'factory_girl', 'use_short_syntax' do
 
   within_file 'test/test_helper.rb' do
     with_node type: 'class', name: 'Test::Unit::TestCase' do
-      insert 'include FactoryGirl::Syntax::Methods'
+      prepend 'include FactoryGirl::Syntax::Methods'
     end
   end
 end
 ```
 
-It works, but it inserts code every time even `include
+It works, but it prepends code every time even `include
 FactoryGirl::Syntax::Methods` already exist in the class, so let's check
-if code doesn't exist, then insert.
+if code doesn't exist, then prepend.
 
 ```ruby
 Synvert::Rewriter.new 'factory_girl', 'use_short_syntax' do
@@ -48,7 +48,7 @@ Synvert::Rewriter.new 'factory_girl', 'use_short_syntax' do
     with_node type: 'class', name: 'Test::Unit::TestCase' do
       # unless include FactoryGirl::Syntax::Methods exists
       unless_exist_node type: 'send', message: 'include', arguments: ['FactoryGirl::Syntax::Methods'] do
-        insert 'include FactoryGirl::Syntax::Methods'
+        prepend 'include FactoryGirl::Syntax::Methods'
       end
     end
   end
@@ -66,7 +66,7 @@ Synvert::Rewriter.new 'factory_girl', 'use_short_syntax' do
         MiniTest::Spec MiniTest::Rails::ActiveSupport::TestCase).each do |class_name|
       with_node type: 'class', name: class_name do
         unless_exist_node type: 'send', message: 'include', arguments: ['FactoryGirl::Syntax::Methods'] do
-          insert 'include FactoryGirl::Syntax::Methods'
+          prepend 'include FactoryGirl::Syntax::Methods'
         end
       end
     end
@@ -87,8 +87,8 @@ Synvert::Rewriter.new 'factory_girl', 'use_short_syntax' do
       unless_exist_node type: 'send', message: 'include', arguments: ['FactoryGirl::Syntax::Methods'] do
         # {{ }} is executed on current node, so we can add or replace with some old code,
         # arguments are [config], arguments.first is config,
-        # here we insert `config.include FactoryGirl::Syntax::Methods`
-        insert "{{arguments.first}}.include FactoryGirl::Syntax::Methods"
+        # here we prepend `config.include FactoryGirl::Syntax::Methods`
+        prepend "{{arguments.first}}.include FactoryGirl::Syntax::Methods"
       end
     end
   end
@@ -106,13 +106,13 @@ Synvert::Rewriter.new 'factory_girl', 'use_short_syntax' do
     # current node is the root node of env.rb file
     # we don't need with_node / within_node here
     unless_exist_node type: 'send', message: 'World', arguments: ['FactoryGirl::Syntax::Methods'] do
-      insert "World(FactoryGirl::Syntax::Methods)"
+      prepend "World(FactoryGirl::Syntax::Methods)"
     end
   end
 end
 ```
 
-We already insert `FactoryGirl::Syntax::Methods` module, then we can
+We already prepend `FactoryGirl::Syntax::Methods` module, then we can
 delete `FactoryGirl` and `.` from `FactoryGirl.create` now.
 
 ```ruby
