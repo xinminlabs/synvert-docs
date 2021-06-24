@@ -184,6 +184,15 @@ Add the code at the top of the current node body.
 prepend "include FactoryGirl::Syntax::Methods"
 ```
 
+### insert
+
+Insert the code at the beginning or end of the current node.
+
+```ruby
+insert '.first', at: 'end'
+insert 'URI.', at: 'beginning'
+```
+
 ### insert\_after
 
 Add the code next to the current node.
