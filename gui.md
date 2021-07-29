@@ -8,7 +8,7 @@ It can show and run the official snippets, and it can help you to create your ow
 
 ### Download
 
-[Mac OS Client](https://download-snippets.xinminlabs.com/download/latest/osx)
+[Mac OS Client](https://download-synvert.xinminlabs.com/download/latest/osx)
 
 ### Screenshot
 
