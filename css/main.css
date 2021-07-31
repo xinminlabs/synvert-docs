@@ -13,3 +13,9 @@ pre code {
   display: inline;
   margin: 0;
 }
+img.logo {
+  width: 32px;
+  height: 32px;
+  display: inline;
+  margin: 0 10px 0 0;
+}
