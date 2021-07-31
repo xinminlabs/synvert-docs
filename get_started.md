@@ -99,6 +99,6 @@ these 2 libraries.
 
 [1]: https://rubygems.org
 [2]: https://github.com/xinminlabs/synvert-snippets
-[3]: http://git-scm.com/
+[3]: https://git-scm.com/
 [4]: https://github.com/whitequark/parser
 [5]: https://github.com/whitequark/ast
