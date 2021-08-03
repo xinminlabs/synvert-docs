@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Get Started
+title: CLI
 ---
 
 ### Installation
