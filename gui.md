@@ -3,12 +3,14 @@ layout: page
 title: GUI
 ---
 
-If you don't want to use the command line, we also provide the MAC app.
+If you don't want to use the command line, we also provide the GUI app.
 It can show and run the official snippets, and it can help you to create your own snippets.
 
 ### Download
 
-[Mac OS Client](https://download-synvert.xinminlabs.com/download/latest/osx)
+[Windows x64](https://download-synvert.xinminlabs.com/download/latest/windows_64)
+
+[Mac OS](https://download-synvert.xinminlabs.com/download/latest/osx)
 
 ### Screenshot
 
