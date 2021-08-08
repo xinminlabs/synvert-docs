@@ -8,9 +8,9 @@ It can show and run the official snippets, and it can help you to create your ow
 
 ### Download
 
-[Windows x64](https://download-synvert.xinminlabs.com/download/latest/windows_64)
-
 [Mac OS](https://download-synvert.xinminlabs.com/download/latest/osx)
+
+[Windows x64](https://download-synvert.xinminlabs.com/download/latest/windows_64), it's not signed and Microsoft SmartScreen will block it.
 
 ### Screenshot
 
