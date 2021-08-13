@@ -244,6 +244,16 @@ with_node type: 'send', message: 'flatten' do
 end
 ```
 
+### wrap
+
+Wrap the current node with a new code.
+
+```ruby
+with_node type: 'class', name: 'TestCase' do
+  wrap with: 'module ActiveSupport'
+end
+```
+
 ### replace\_erb\_stmt\_with\_expr
 
 Replace erb statemet code with expression code.
