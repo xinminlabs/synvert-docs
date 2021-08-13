@@ -280,6 +280,14 @@ Add other snippet, it's easy to reuse other snippets.
 add_snippet 'rails', 'convert_dynamic_finders'
 ```
 
+### redo\_until\_no\_change
+
+Rerun the snippet until no change affected.
+
+```ruby
+redo_until_no_change
+```
+
 ### helper\_method
 
 Add a method which is available in the current snippet.
