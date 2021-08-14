@@ -305,13 +305,13 @@ method1(arg1, arg2)
 List somethings the snippet should do, but not do yet.
 
 ```ruby
-todo <<-EOF
-Rails 4.0 no longer supports loading plugins from vendor/plugins. You
-must replace any plugins by extracting them to gems and adding them to
-your Gemfile. If you choose not to make them gems, you can move them
-into, say, lib/my_plugin/* and add an appropriate initializer in
-config/initializers/my_plugin.rb.
-EOF
+todo <<~EOS
+  Rails 4.0 no longer supports loading plugins from vendor/plugins. You
+  must replace any plugins by extracting them to gems and adding them to
+  your Gemfile. If you choose not to make them gems, you can move them
+  into, say, lib/my_plugin/* and add an appropriate initializer in
+  config/initializers/my_plugin.rb.
+EOS
 ```
 
 Check out the source code of DSLs here: [this][2] and [that][3]
