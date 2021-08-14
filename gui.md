@@ -69,48 +69,31 @@ The generated snippet finds all `defs` node with name `up` and delete the `self`
 
 From rails 2 to rails 3, I want to change activerecord code from `update_all(conditions, values)` to `where(conditions).update(values)`.
 
-I fill in input as
+I fill in inputs as
 
 ```ruby
 Post.update_all({ title: 'old title' }, { title: 'new title' })
 ```
 
-and output as
-
-```ruby
-Post.where(title: 'old title').update_all(title: 'new title')
-```
-
-it will generate the snippet as
-
-```ruby
-Synvert::Rewriter.execute do
-  within_files '**/*.rb' do
-    with_node type: 'send', receiver: 'Post', message: 'update_all', arguments: { size: 2, first: { type: 'hash', title_value: "'old title'" }, second: { type: 'hash', title_value: "'new title'" } } do
-      replace :receiver, with: "{{receiver}}.where(title: 'old title')"
-      replace :arguments, with: "title: 'new title'"
-    end
-  end
-end
-```
-
-The generated snippet finds the exact code `Post.updated_all({ title: 'old title' }, { title: 'new test'})` and replace it with `Post.where(title: 'old title').update_all(title: 'new title')`, but this is not what I expected.
-
-So I add one more input and output to make the snippet better.
-
-input
+and
 
 ```ruby
 Article.update_all({ name: 'old name' }, { name: 'new name' })
 ```
 
-output
+and outputs as
+
+```ruby
+Post.where(title: 'old title').update_all(title: 'new title')
+```
+
+and
 
 ```ruby
 Article.where(name: 'old name').update_all(name: 'new name')
 ```
 
-As you can see, I type different receiver (Post and Article) and different arguments, so the generated snippet is as follows
+it will generate the snippet as
 
 ```ruby
 {% raw %}
