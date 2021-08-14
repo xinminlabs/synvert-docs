@@ -72,13 +72,13 @@ From rails 2 to rails 3, I want to change activerecord code from `update_all(con
 I fill in input as
 
 ```ruby
-Post.update_all({ title: 'title' }, { title: 'test' })
+Post.update_all({ title: 'old title' }, { title: 'new title' })
 ```
 
 and output as
 
 ```ruby
-Post.where({ title: 'title' }).update_all({ title: 'test' })
+Post.where(title: 'old title').update_all(title: 'new title')
 ```
 
 it will generate the snippet as
@@ -86,28 +86,28 @@ it will generate the snippet as
 ```ruby
 Synvert::Rewriter.execute do
   within_files '**/*.rb' do
-    with_node type: 'send', receiver: 'Post', message: 'update_all', arguments: { size: 2, first: { type: 'hash', title_value: "'title'" }, second: { type: 'hash', title_value: "'test'" } } do
-      replace :receiver, with: "{{receiver}}.where({ title: 'title' })"
-      replace :arguments, with: "{ title: 'test' }"
+    with_node type: 'send', receiver: 'Post', message: 'update_all', arguments: { size: 2, first: { type: 'hash', title_value: "'old title'" }, second: { type: 'hash', title_value: "'new title'" } } do
+      replace :receiver, with: "{{receiver}}.where(title: 'old title')"
+      replace :arguments, with: "title: 'new title'"
     end
   end
 end
 ```
 
-The generated snippet finds the exact code `Post.updated_all({ title: 'title' }, { title: 'test'})` and replace it with `Post.where({ title: 'title' }).update_all({ title: 'test' })`, but this is not what I expected.
+The generated snippet finds the exact code `Post.updated_all({ title: 'old title' }, { title: 'new test'})` and replace it with `Post.where(title: 'old title').update_all(title: 'new title')`, but this is not what I expected.
 
 So I add one more input and output to make the snippet better.
 
 input
 
 ```ruby
-Article.update_all({ content: 'title' }, { content: 'test' })
+Article.update_all({ name: 'old name' }, { name: 'new name' })
 ```
 
 output
 
 ```ruby
-Article.where({ content: 'title' }).update_all({ content: 'test' })
+Article.where(name: 'old name').update_all(name: 'new name')
 ```
 
 As you can see, I type different receiver (Post and Article) and different arguments, so the generated snippet is as follows
@@ -117,7 +117,7 @@ As you can see, I type different receiver (Post and Article) and different argum
 Synvert::Rewriter.execute do
   within_files '**/*.rb' do
     with_node type: 'send', message: 'update_all', arguments: { size: 2, first: { type: 'hash' }, second: { type: 'hash' } } do
-      replace_with '{{receiver}}.where({{arguments.first}}).update_all({{arguments.second}})'
+      replace_with '{{receiver}}.where({{arguments.first.strip_curly_braces}}).update_all({{arguments.second.strip_curly_braces}})'
     end
   end
 end
