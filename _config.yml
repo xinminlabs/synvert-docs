@@ -10,7 +10,7 @@ baseurl:          /synvert
 # Setup
 title:            Synvert
 tagline:          'syntax + convert'
-description:      'synvert is used to convert ruby code to better syntax.'
+description:      'write ruby code to change ruby code.'
 url:              https://github.com/xinminlabs/synvert
 
 author:
