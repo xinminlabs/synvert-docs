@@ -3,27 +3,29 @@ layout: page
 title: GUI
 ---
 
-If you don't want to use the command line, we also provide the GUI app.
-It can show and run the official snippets, and it can help you to create your own snippets.
+![GUI Snippet Show Screenshot]({{ site.baseurl }}/img/gui_snippet_show_screenshot.png)
+![GUI Snippet New Single Screenshot]({{ site.baseurl }}/img//gui_snippet_new_single_screenshot.png)
+![GUI Snippet New Multi First Screenshot]({{ site.baseurl }}/img//gui_snippet_new_multi_first_screenshot.png)
+![GUI Snippet New Multi Second Screenshot]({{ site.baseurl }}/img//gui_snippet_new_multi_second_screenshot.png)
+![GUI Snippet Diff Screenshot]({{ site.baseurl }}/img//gui_snippet_diff_screenshot.png)
+
+The GUI provides the following features
+
+* List official snippets
+* Show a snippet and its source code
+* **Generate a snippet by your inputs and outputs**
+* Run a snippet on your workspace
+* Show diff code after running a snippet and commit changes
+* Sync snippets up to date
+* Setup in docker mode or native mode
+
+The best feature is that it can help you to write your own snippets without learning AST, you just need to fill in the inputs and outputs ruby code.
 
 ### Download
 
 [Mac OS](https://download-synvert.xinminlabs.com/download/latest/osx)
 
 [Windows x64](https://download-synvert.xinminlabs.com/download/latest/windows_64), it's not signed and Microsoft SmartScreen will block it.
-
-### Screenshot
-
-* Snippet Show
-![GUI Snippet Show Screenshot]({{ site.baseurl }}/img/gui_snippet_show_screenshot.png)
-
-* Snippet New
-![GUI Snippet New Single Screenshot]({{ site.baseurl }}/img//gui_snippet_new_single_screenshot.png)
-![GUI Snippet New Multi First Screenshot]({{ site.baseurl }}/img//gui_snippet_new_multi_first_screenshot.png)
-![GUI Snippet New Multi Second Screenshot]({{ site.baseurl }}/img//gui_snippet_new_multi_second_screenshot.png)
-
-* Code Diff
-![GUI Snippet Diff Screenshot]({{ site.baseurl }}/img//gui_snippet_diff_screenshot.png)
 
 ### How to write inputs/outputs?
 

@@ -40,4 +40,4 @@ won't change the node scope.
 
 ### Action
 
-Action does some real action, e.g. add / replace / remove code.
+Action does some real action, e.g. insert / replace / delete code.

@@ -3,6 +3,8 @@ layout: page
 title: CLI
 ---
 
+<script type="text/javascript" src="https://asciinema.org/a/11973.js" id="asciicast-11973" async></script>
+
 ### Installation
 
 Synvert is distributed using [RubyGems][1].
