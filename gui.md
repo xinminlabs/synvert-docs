@@ -13,7 +13,7 @@ The GUI provides the following features
 
 * List official snippets
 * Show a snippet and its source code
-* **Generate a snippet by your inputs and outputs**
+* **Generate a snippet based on your inputs and outputs**
 * Run a snippet on your workspace
 * Show diff code after running a snippet and commit changes
 * Sync snippets up to date
