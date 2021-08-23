@@ -1,0 +1,25 @@
+FROM nginx:stable
+
+# Ruby
+RUN apt-get -y update
+RUN apt-get -y install ruby-dev build-essential patch zlib1g-dev liblzma-dev
+
+# Jekyll
+RUN gem install --no-rdoc --no-ri bundler
+
+# Environment
+ENV LC_ALL C.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+
+COPY Gemfile* /tmp/
+WORKDIR /tmp
+RUN bundle install
+
+ENV app /app
+RUN mkdir $app
+WORKDIR $app
+ADD . $app
+
+RUN jekyll build
+RUN cp -r _site/* /usr/share/nginx/html
