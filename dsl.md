@@ -317,5 +317,5 @@ EOS
 Check out the source code of DSLs here: [this][2] and [that][3]
 
 [1]: /rules/
-[2]: https://github.com/xinminlabs/synvert-core/blob/master/lib/synvert/core/rewriter.rb
-[3]: https://github.com/xinminlabs/synvert-core/blob/master/lib/synvert/core/rewriter/instance.rb
+[2]: https://github.com/xinminlabs/synvert-core-ruby/blob/master/lib/synvert/core/rewriter.rb
+[3]: https://github.com/xinminlabs/synvert-core-ruby/blob/master/lib/synvert/core/rewriter/instance.rb

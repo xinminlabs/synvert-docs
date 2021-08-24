@@ -446,4 +446,4 @@ type: 'send', receiver: 'FactoryBot', message: { not_in: [:save, :update] }
 
 If you want to get more, please read [here][1].
 
-[1]: https://github.com/xinminlabs/synvert-core/blob/master/lib/synvert/core/node_ext.rb
+[1]: https://github.com/xinminlabs/synvert-core-ruby/blob/master/lib/synvert/core/node_ext.rb

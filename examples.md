@@ -9,5 +9,5 @@ Learn best by examples
 
 [Test code][2]
 
-[1]: https://github.com/xinminlabs/synvert-snippets/tree/master/lib
-[2]: https://github.com/xinminlabs/synvert-snippets/tree/master/spec
+[1]: https://github.com/xinminlabs/synvert-snippets-ruby/tree/master/lib
+[2]: https://github.com/xinminlabs/synvert-snippets-ruby/tree/master/spec

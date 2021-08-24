@@ -79,4 +79,4 @@ lots of helper methods introduced in `active_support/core_ext/object`.
 
 Check out helper source code [here][1]
 
-[1]: https://github.com/xinminlabs/synvert-core/blob/master/lib/synvert/core/rewriter/helper.rb
+[1]: https://github.com/xinminlabs/synvert-core-ruby/blob/master/lib/synvert/core/rewriter/helper.rb

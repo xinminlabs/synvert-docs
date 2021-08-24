@@ -14,7 +14,7 @@ bundle exec jekyll serve --watch
 
 ### Visit
 
-open `http://localhost:4000/synvert/` on browser
+open `http://localhost:4000/` on browser
 
 ### Production deplooyment
 

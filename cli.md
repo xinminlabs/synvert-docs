@@ -100,7 +100,7 @@ immutable abstract syntax trees. It's highly recommended to look through
 these 2 libraries.
 
 [1]: https://rubygems.org
-[2]: https://github.com/xinminlabs/synvert-snippets
+[2]: https://github.com/xinminlabs/synvert-snippets-ruby
 [3]: https://git-scm.com/
 [4]: https://github.com/whitequark/parser
 [5]: https://github.com/whitequark/ast

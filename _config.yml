@@ -9,11 +9,11 @@ permalink:        pretty
 title:            Synvert
 tagline:          'syntax + convert'
 description:      'write ruby code to change ruby code.'
-url:              https://github.com/xinminlabs/synvert
+url:              https://synvert.xinminlabs.com
 
 author:
   name:           'Xinmin Labs'
   url:            https://xinminlabs.com
 
 github:
-  repo:           https://github.com/xinminlabs/synvert
+  repo:           https://github.com/xinminlabs/synvert-ruby
