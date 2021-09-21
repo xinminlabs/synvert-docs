@@ -22,17 +22,19 @@ This will install synvert, along with synvert-core and other dependencies.
 Now you can use synvert to convert your ruby code.
 
 ```
-$ synvert -h
-Usage: synvert [project_path]
+$ synvert-ruby -h
+Usage: synvert-ruby [project_path]
     -d, --load SNIPPET_PATHS         load custom snippets, snippet paths can be local file path or remote http url
     -l, --list                       list all available snippets
-    -o, --open SNIPPET_NAME          Open a snippet
     -q, --query QUERY                query specified snippets
-        --skip FILE_PATTERNS         skip specified files or directories, separated by comma, e.g. app/models/post.rb,vendor/plugins/**/*.rb
     -s, --show SNIPPET_NAME          show specified snippet description, SNIPPET_NAME is combined by group and name, e.g. ruby/new_hash_syntax
-        --sync                       sync snippets
-    -r, --run SNIPPET_NAME           run specified snippet, e.g. ruby/new_hash_syntax
+    -o, --open SNIPPET_NAME          Open a snippet
     -g, --generate NEW_SNIPPET_NAME  generate a new snippet
+        --sync                       sync snippets
+        --execute                    execute snippet
+    -r, --run SNIPPET_NAME           run specified snippet, e.g. ruby/new_hash_syntax
+        --show-run-process           show processing files when running a snippet
+        --skip FILE_PATTERNS         skip specified files or directories, separated by comma, e.g. app/models/post.rb,vendor/plugins/**/*.rb
     -f, --format FORMAT              output format
     -v, --version                    show this version
 ```
@@ -42,7 +44,7 @@ Usage: synvert [project_path]
 [snippets][2] are available on github, you can sync them any time you want.
 
 ```
-$ synvert --sync
+$ synvert-ruby --sync
 ```
 
 ##### List snippets
@@ -50,7 +52,7 @@ $ synvert --sync
 List all available snippets
 
 ```
-$ synvert -l
+$ synvert-ruby -l
 ```
 
 ##### Show a snippet
@@ -58,7 +60,7 @@ $ synvert -l
 Describe what a snippet does.
 
 ```
-$ synvert -s factory_bot/use_short_syntax
+$ synvert-ruby -s factory_bot/use_short_syntax
 ```
 
 ##### Open a snippet
@@ -67,7 +69,7 @@ Open a snippet in your editor, editor is defined in
 `ENV['SNIPPET_EDITOR']` or `ENV['EDITOR']`
 
 ```
-$ synvert -o factory_bot/use_short_syntax
+$ synvert-ruby -o factory_bot/use_short_syntax
 ```
 
 ##### Run a snippet
@@ -75,7 +77,7 @@ $ synvert -o factory_bot/use_short_syntax
 Run a snippet, analyze and then change code.
 
 ```
-$ synvert -r factory_bot/use_short_syntax ~/Sites/xinminlabs/awesomecode.io
+$ synvert-ruby -r factory_bot/use_short_syntax ~/Sites/xinminlabs/awesomecode.io
 ```
 
 It's recommended that you use version control software like [git][3],
@@ -84,12 +86,18 @@ your ruby code.
 
 You can write your own snippets then load them by `--load`.
 
+Show processing files when running a snippet.
+
+```
+$ synvert-ruby -r factory_bot/use_short_syntax --show-run-process ~/Sites/xinminlabs/awesomecode.io
+```
+
 ##### Generate a snippet
 
 Generate a new snippet
 
 ```
-$ synvert -g group/name
+$ synvert-ruby -g group/name
 ```
 
 ### Dependencies
