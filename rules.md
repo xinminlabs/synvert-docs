@@ -242,6 +242,42 @@ node.body
 # (send (lvar :config) :order= (str "random"))
 ```
 
+### :lvar node
+
+`name` for :lvar node.
+
+```ruby
+node = Parser::CurrentRuby.parse("foo = 'bar'\nfoo").children.last
+# (lvar :foo)
+
+node.name
+# :foo
+```
+
+### :ivar node
+
+`name` for :ivar node.
+
+```ruby
+node = Parser::CurrentRuby.parse("@foo = 'bar'\n@foo").children.last
+# (ivar :@foo)
+
+node.name
+# :@foo
+```
+
+### :cvar node
+
+`name` for :cvar node.
+
+```ruby
+node = Parser::CurrentRuby.parse("@@foo = 'bar'\n@@foo").children.last
+# (cvar :@@foo)
+
+node.name
+# :@@foo
+```
+
 ### :defined? node
 
 `arguments` for :defined? node.
