@@ -341,6 +341,60 @@ node.value
 
 ## AST node method
 
+### strip_curly_braces
+
+strip curly braces
+
+```ruby
+node = parse("{ foo: 'bar' }")
+node.strip_curly_braces
+# foo: 'bar'
+```
+
+### wrap_curly_braces
+
+wrap curly braces
+
+```ruby
+node = parse("test(foo: 'bar')").arguments.first
+node.wrap_curly_braces
+# { foo: 'bar' }
+```
+
+### to_single_quote
+
+converts double quote to single quote.
+
+```ruby
+node = parse('"foobar"')
+node.to_single_quote
+# 'foobar'
+```
+
+### to_symbol
+
+convert string to symbol.
+
+```ruby
+node = parse("'foobar'")
+node.to_symbol
+# :foobar
+```
+
+### to_lambda_literal
+
+convert lambda node to lambda literal.
+
+```ruby
+node = Parser::CurrentRuby.parse "lambda { foobar }"
+# s(:block,
+#   s(:send, nil, :lambda),
+#   s(:args),
+#   s(:send, nil, :foobar))
+node.to_lambda_literal
+# -> { foobar }
+```
+
 ### has_key?(key)
 
 check if :hash node contains key.
