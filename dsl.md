@@ -116,8 +116,7 @@ end
 ```
 
 ```ruby
-within_node type: 'class', name: 'Test::Unit::TestCase' do
-  # find child nodes
+with_node type: 'block', 'caller.receiver': 'FactoryGirl', message: 'create' do
   # check nodes
   # add / replace / remove code
 end
@@ -131,6 +130,14 @@ Go to the specified child code.
 with_node type: 'block' do
   goto_node :caller do
     # change code in block caller
+  end
+end
+```
+
+```ruby
+with_node type: 'block' do
+  goto_node 'caller.receiver' do
+    # change code in block caller's receiver
   end
 end
 ```
