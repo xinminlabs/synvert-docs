@@ -126,7 +126,7 @@ node.arguments
 
 ### :class node
 
-`name`, `parent_class` for :class node.
+`name`, `parent_class` and `body` for :class node.
 
 ```ruby
 node = Parser::CurrentRuby.parse "class Admin < User; end"
@@ -135,15 +135,19 @@ node = Parser::CurrentRuby.parse "class Admin < User; end"
 #     (const nil :User) nil)
 
 node.name
-# => (const nil :Admin)
+# (const nil :Admin)
 
 node.parent_class
-# => (const nil :User)
+# (const nil :User)
+
+node.body
+
+# nil
 ```
 
 ### :module node
 
-`name` for :module node.
+`name` and `body` for :module node.
 
 ```ruby
 node = Parser::CurrentRuby.parse "module Helper; end"
@@ -152,6 +156,9 @@ node = Parser::CurrentRuby.parse "module Helper; end"
 
 node.name
 # (const nil Helper)
+
+node.body
+# nil
 ```
 
 ### :def node
@@ -159,11 +166,11 @@ node.name
 `name`, `arguments` and `body` for :def node.
 
 ```ruby
-code =<<-EOC
-def full_name(first_name, last_name)
-  first_name + " " + last_name
-end
-EOC
+code = <<~EOS
+  def full_name(first_name, last_name)
+    first_name + " " + last_name
+  end
+EOS
 node = Parser::CurrentRuby.parse code
 # (def :full_name
 #   (args
@@ -187,14 +194,14 @@ node.body
 
 ### :defs node
 
-`name` and `body` for :defs node.
+`name`, `arguments` and `body` for :defs node.
 
 ```ruby
-code =<<EOC
-def self.active
-  where(active: true)
-end
-EOC
+code = <<~EOS
+  def self.active
+    where(active: true)
+  end
+EOS
 node = Parser::CurrentRuby.parse code
 # (defs
 #   (self) :active
@@ -209,6 +216,9 @@ node.name
 # :active
 
 node.arguments
+# (args)
+
+node.body
 # (send nil :where (hash (pair (sym :active) (true))))
 ```
 
@@ -217,11 +227,11 @@ node.arguments
 `caller`, `arguments` and `body` for :block node.
 
 ```ruby
-code =<<-EOC
-RSpec.configure do |config|
-  config.order = 'random'
-end
-EOC
+code = <<~EOS
+  RSpec.configure do |config|
+    config.order = 'random'
+  end
+EOS
 node = Parser::CurrentRuby.parse code
 # (block
 #   (send
