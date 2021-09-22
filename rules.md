@@ -288,6 +288,93 @@ node.name
 # :@@foo
 ```
 
+### :lasgn node
+
+`left_value` and `right_value` for :lasgn node.
+
+```ruby
+node = Parser::CurrentRuby.parse('a = 1')
+# s(:lvasgn, :a, s(:int, 1))
+
+node.left_value
+# :a
+
+node.right_value
+# s(:int, 1)
+```
+
+### :iasgn node
+
+`left_value` and `right_value` for :iasgn node.
+
+```ruby
+node = Parser::CurrentRuby.parse('@a = 1')
+# s(:ivasgn, :@a, s(:int, 1))
+
+node.left_value
+# :@a
+
+node.right_value
+# s(:int, 1)
+```
+
+### :casgn node
+
+`left_value` and `right_value` for :casgn node.
+
+```ruby
+node = Parser::CurrentRuby.parse('@@a = 1')
+# s(:cvasgn, :@@a, s(:int, 1))
+
+node.left_value
+# :@@a
+
+node.right_value
+# s(:int, 1)
+```
+
+### :masgn node
+
+`left_value` and `right_value` for :masgn node.
+
+```ruby
+node = Parser::CurrentRuby.parse('a, b = 1, 2')
+# s(:masgn,
+#   s(:mlhs,
+#     s(:lvasgn, :a),
+#     s(:lvasgn, :b)),
+#   s(:array,
+#     s(:int, 1),
+#     s(:int, 2)))
+
+node.left_value
+# s(:mlhs,
+#   s(:lvasgn, :a),
+#   s(:lvasgn, :b)),
+
+node.right_value
+# s(:array,
+#   s(:int, 1),
+#   s(:int, 2)))
+```
+
+### :or_asgn node
+
+`left_value` and `right_value` for :or_asgn node.
+
+```ruby
+node = Parser::CurrentRuby.parse('a ||= 1')
+# s(:or_asgn,
+#   s(:lvasgn, :a),
+#   s(:int, 1))
+
+node.left_value
+# :a
+
+node.right_value
+# (:int, 1)
+```
+
 ### :defined? node
 
 `arguments` for :defined? node.
