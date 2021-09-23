@@ -17,3 +17,6 @@ author:
 
 github:
   repo:           https://github.com/xinminlabs/synvert-ruby
+
+plugins:
+  - jekyll-redirect-from

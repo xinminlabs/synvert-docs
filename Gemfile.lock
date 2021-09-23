@@ -261,6 +261,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-redirect-from
   kramdown
   rouge
   webrick (~> 1.7)
