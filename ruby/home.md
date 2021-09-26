@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+language: ruby
 ---
 
 ![logo]({{ site.baseurl }}/img/logo_96.png)

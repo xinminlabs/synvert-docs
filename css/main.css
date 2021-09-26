@@ -13,9 +13,20 @@ pre code {
   display: inline;
   margin: 0;
 }
-img.logo {
+img[alt=logo] {
   width: 32px;
   height: 32px;
   display: inline;
   margin: 0 10px 0 0;
+}
+.languages {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+}
+.languages div {
+  flex-direction: column;
+  border: 1px solid #999;
+  padding: 5px 10px;
 }
