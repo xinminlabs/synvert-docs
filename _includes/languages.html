@@ -1,4 +1,7 @@
 <div class="languages">
-  <div class="active">Ruby</div>
-  <div>JS</div>
+  {% for language in site.data.languages %}
+    <div class="{{language.id}}">
+      <a href="{{site.baseurl}}/{{language.id}}/home/">{{language.name}}</a>
+    </div>
+  {% endfor %}
 </div>
