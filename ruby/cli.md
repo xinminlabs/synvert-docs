@@ -15,7 +15,7 @@ To install the latest version, run
 $ gem install synvert
 ```
 
-This will install synvert, along with synvert-core and other dependencies.
+This will install synvert-ruby, along with synvert-core-ruby and other dependencies.
 
 ### Usage
 
