@@ -148,6 +148,32 @@ matches
 { type: 'VariableDeclarator', kind: { not: "let" } }
 ```
 
+### in
+
+```javascript
+const source = `class Synvert {}`;
+const node = espree.parse(source, { ecmaVersion: "latest", sourceType: "module" });
+```
+
+matches
+
+```javascript
+{ type: "ClassDeclaration", id: { in: ["FooBar", "Synvert"] } }
+```
+
+### notIn
+
+```javascript
+const source = `class Synvert {}`;
+const node = espree.parse(source, { ecmaVersion: "latest", sourceType: "module" });
+```
+
+matches
+
+```javascript
+{ type: "ClassDeclaration", id: { notIn: ["Foo", "Bar"] } }
+```
+
 If you want to get more, please read [here][1].
 
 [1]: https://github.com/xinminlabs/synvert-core-javascript/blob/master/lib/ast-node-ext.js
