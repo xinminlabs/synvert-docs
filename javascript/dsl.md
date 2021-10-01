@@ -227,5 +227,5 @@ addSnippet("javascript", "prefer-class-properties");
 Check out the source code of DSLs here: [this][2] and [that][3]
 
 [1]: /javascript/rules/
-[2]: https://github.com/xinminlabs/synvert-core-javascript/blob/master/lib/rewriter.rb
-[3]: https://github.com/xinminlabs/synvert-core-javascript/blob/master/lib/instance.rb
+[2]: https://github.com/xinminlabs/synvert-core-javascript/blob/master/lib/rewriter.js
+[3]: https://github.com/xinminlabs/synvert-core-javascript/blob/master/lib/instance.js
