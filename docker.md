@@ -1,5 +1,5 @@
 ---
 layout: page
 title: Docker
-redirect_to: /ruby/docker
+redirect_to: /ruby/home/
 ---

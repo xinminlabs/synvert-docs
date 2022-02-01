@@ -1,5 +1,5 @@
 ---
 layout: page
 title: CLI
-redirect_to: /ruby/cli/
+redirect_to: /ruby/home/
 ---

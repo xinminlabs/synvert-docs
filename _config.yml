@@ -8,7 +8,7 @@ permalink:        pretty
 # Setup
 title:            Synvert
 tagline:          'syntax + convert'
-description:      'write ruby code to change ruby code.'
+description:      'write code to change code.'
 url:              https://synvert.xinminlabs.com
 
 author:
