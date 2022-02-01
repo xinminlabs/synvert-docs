@@ -1,7 +1,5 @@
-<div class="languages">
+<select id="languages">
   {% for language in site.data.languages %}
-    <div class="{{language.id}}">
-      <a href="{{site.baseurl}}/{{language.id}}/home/">{{language.name}}</a>
-    </div>
+    <option value="{{language.id}}">{{language.name}}</option>
   {% endfor %}
-</div>
+</select>

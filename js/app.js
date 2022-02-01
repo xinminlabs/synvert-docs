@@ -3,8 +3,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
   currentLinks.forEach(function(link) { link.classList.add('current'); });
 
   var language = window.location.href.split('/')[3];
-  var element = document.querySelector('.languages .' + language);
-  if (element) {
-    element.classList.add('active');
-  }
+  var languageSelect = document.querySelector('#languages');
+  languageSelect.addEventListener('change', function() {
+    window.location.href = '/' + languageSelect.value + '/';
+  });
+  var element = languageSelect.querySelector('option[value="' + language + '"]');
+  element.selected = 'selected';
 });
