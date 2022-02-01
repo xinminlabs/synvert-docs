@@ -5,16 +5,16 @@
 
   <body>
 
-    {% include ruby_sidebar.html %}
+    {% include ruby_header.html %}
 
-    <div class="content container">
+    <main>
       {% include languages.html %}
 
       <div class="page">
         <h1 class="page-title">{{ page.title }}</h1>
         {{ content }}
       </div>
-    </div>
+    </main>
 
     {% include footer.html %}
   </body>
