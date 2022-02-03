@@ -1,5 +1,5 @@
 ---
 layout: javascript
 title: CLI
-redirect_to: /javascript/home/
+redirect_to: /javascript/get_started/
 ---

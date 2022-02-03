@@ -1,5 +1,5 @@
 ---
 layout: page
 title: GUI
-redirect_to: /ruby/home/
+redirect_to: /ruby/get_started/
 ---
