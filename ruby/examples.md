@@ -3,11 +3,9 @@ layout: ruby
 title: Examples
 ---
 
-Learn best by examples
-
-[Source code][1]
-
-[Test code][2]
-
-[1]: https://github.com/xinminlabs/synvert-snippets-ruby/tree/master/lib
-[2]: https://github.com/xinminlabs/synvert-snippets-ruby/tree/master/spec
+<ul>
+    {% assign ruby_posts = site.posts | where_exp: "post", "post.categories[0] == 'ruby'" %}
+    {% for post in ruby_posts %}
+        <li><a href="{{ post.url | relative_url }}">{{post.title}}</a></li>
+    {% endfor %}
+</ul>
