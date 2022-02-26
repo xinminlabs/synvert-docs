@@ -18,7 +18,7 @@ to fix jquery 3 upgrade warnings.
 ### Use the synvert snippet
 
 The overall snippet is `jquery/migrate`, it includes many small snippets, e.g. `jquery/deprecate-event-shorthand`,
-so I can run the following command to automatically convert the jqeury code.
+so you can run the following command to automatically convert the jqeury code.
 
 ```bash
 $ synvert-javascript --run jquery/migrate --path <project_path>
@@ -27,8 +27,8 @@ $ synvert-javascript --run jquery/migrate --path <project_path>
 Here are a small part of the long git diff.
 
 ```diff
--$(document).ready(function($) {
-+$(function($) {
+-$(document).ready(function() {
++$(function() {
 
 -  jQuery('a.setup_link').click(function(){
 +  jQuery('a.setup_link').on('click', function(){
@@ -124,7 +124,7 @@ It finds the code starts with `$` and calls property `click`, and only one argum
 It uses regexp to match the starting `$` so that it can match some complex code like
 `$this.find('#child').click(function() {})`
 
-Then I can do some convertions.
+Then I can do some conversions.
 
 1\. replace `.click` with `.on`.
 
@@ -213,7 +213,7 @@ Then replace `callee.property` and `arguments`
 {% raw %}replace(['callee.property', 'arguments'], { with: "trigger('{{callee.property}}')" });{% endraw %}
 ```
 
-To get the full snippet code, please check out [here](https://github.com/xinminlabs/synvert-snippets-javascript/blob/master/lib/jquery/deprecate-event-shorthand.js)
+To get the full snippet code, please check it out [here](https://github.com/xinminlabs/synvert-snippets-javascript/blob/master/lib/jquery/deprecate-event-shorthand.js)
 
 I named the snippet `jquery/deprecate-event-shorthand`, so I can run the command
 
