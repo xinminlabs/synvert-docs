@@ -3,7 +3,7 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Permalinks
-permalink:        /:categories/:title
+permalink:        pretty
 
 # Setup
 title:            Synvert
