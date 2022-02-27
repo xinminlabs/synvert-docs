@@ -22,4 +22,4 @@ WORKDIR $app
 ADD . $app
 
 RUN jekyll build
-RUN cp -r _site/* /usr/share/nginx/html
+RUN cp -r _site/** /usr/share/nginx/html
