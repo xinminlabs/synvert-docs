@@ -17,3 +17,11 @@ author:
 
 plugins:
   - jekyll-redirect-from
+
+exclude:
+  - Gemfile*
+  - README.md
+  - deploy.sh
+  - Dockerfile.prod
+  - docker-nginx.conf
+  - sync_snippets.rb
