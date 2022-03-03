@@ -20,13 +20,15 @@ This will install `synvert-javascript`, along with `synvert-core-javascript` and
 Now you can use synvert to convert your javascript code.
 
 ```
-$ synvert-javascript -h
+$ synvert-javascript --help
 Write javascript code to change javascript code
 
 USAGE
   $ synvert-javascript
 
 OPTIONS
+  -d, --load=load          load custom snippets, snippet paths can be local file path or remote http url
+  -f, --format=format      output format
   -g, --generate=generate  generate a snippet with snippet name
   -h, --help               show CLI help
   -l, --list               list snippets
@@ -54,7 +56,9 @@ $ synvert-javascript --sync
 List all available snippets
 
 ```
-$ synvert-javascript -l
+$ synvert-javascript --list
+
+$ synvert-javascript --list --format json
 ```
 
 #### Show a snippet
@@ -76,6 +80,15 @@ $ synvert-javascript -r javascript/trailing-comma
 It's recommended that you use version control software like git,
 after using synvert, you can use check what changes synvert does to
 your javascript code.
+
+
+load custom snippet
+
+```
+$ synvert-javascript --load https://raw.githubusercontent.com/xinminlabs/synvert-snippets-javascript/master/lib/javascript/no-useless-constructor.js --run javascript/no-useless-constructor
+
+$ synvert-javascript --load ~/Sites/xinminlabs/synvert-snippets-javascript/lib/jquery/deprecate-event-shorthand.js --run javascript/no-useless-constructor
+```
 
 Show processing files when running a snippet.
 
