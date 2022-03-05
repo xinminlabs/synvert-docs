@@ -1,6 +1,6 @@
 ---
 layout: javascript
-title: Terms
+title: Docs
 ---
 
 ## Terms
@@ -57,8 +57,6 @@ matches only when all of attributes match.
 ### javascript code
 
 ```javascript
-const espree = require("espree");
-
 const source = `
   class Button extends Component {
     constructor(props) {
@@ -67,7 +65,6 @@ const source = `
   }
 `
 const node = espree.parse(source, { ecmaVersion: "latest", sourceType: "module" });
-
 // {
 //   "type": "ClassDeclaration",
 //   "id": {
@@ -149,8 +146,8 @@ returns exactly source code for an acorns child node.
 
 ```javascript
 const source = `const user = { firstName: "Richard", lastName: "Huang" }`;
-const node = espree.parse(source, { ecmaVersion: "latest", sourceType: "module" });
-node.childNodeSource("declarations.0.init.properties.0.value.value")
+const node = espree.parse(source, { ecmaVersion: "latest", sourceType: "module", loc: true });
+node.childNodeSource("declarations.0.init.properties.0.value")
 // Richard
 ```
 
@@ -213,6 +210,58 @@ matches
 
 ```javascript
 { type: "ClassDeclaration", id: { notIn: ["Foo", "Bar"] } }
+```
+
+### gt
+
+```javascript
+const code = `import { Component, Fragment } from 'react'`;
+const node = parse(code);
+```
+
+matches
+
+```javascript
+{ specifiers: { length: { gt: 1 } } };
+```
+
+### gte
+
+```javascript
+const code = `import { Component, Fragment } from 'react'`;
+const node = parse(code);
+```
+
+matches
+
+```javascript
+{ specifiers: { length: { gte: 2 } } };
+```
+
+### lt
+
+```javascript
+const code = `import { Component, Fragment } from 'react'`;
+const node = parse(code);
+```
+
+matches
+
+```javascript
+{ specifiers: { length: { lt: 3 } } };
+```
+
+### lte
+
+```javascript
+const code = `import { Component, Fragment } from 'react'`;
+const node = parse(code);
+```
+
+matches
+
+```javascript
+{ specifiers: { length: { lte: 2 } } };
 ```
 
 If you want to get more, please read [here](https://github.com/xinminlabs/synvert-core-javascript/blob/master/lib/ast-node-ext.js)
