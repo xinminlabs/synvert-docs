@@ -467,7 +467,7 @@ node.value
 # (str "richard")
 ```
 
-## AST node method
+## AST node methods
 
 ### strip_curly_braces
 

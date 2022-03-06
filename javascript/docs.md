@@ -127,7 +127,7 @@ const node = espree.parse(source, { ecmaVersion: "latest", sourceType: "module" 
 // }
 ```
 
-## Node method
+## Node methods
 
 ### toSource
 
