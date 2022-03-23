@@ -19,6 +19,6 @@ open `http://localhost:4000/` on browser
 ### Push docker
 
 ```
-docker build -f Dockerfile.prod -t xinminlabs/synvert-docs:$(git rev-parse --short HEAD) .
+docker build -t xinminlabs/synvert-docs:$(git rev-parse --short HEAD) .
 docker push xinminlabs/synvert-docs:$(git rev-parse --short HEAD)
 ```
