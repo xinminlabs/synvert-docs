@@ -5,7 +5,7 @@ title: synvert-javascript
 
 [synvert-javascript](https://github.com/xinminlabs/synvert-javascript) is a command tool to rewrite javascript code automatically, it depends on `synvert-core-javascript` and `synvert-snippets-javascript`.
 
-[synvert-core-javascript](https://github.com/xinminlabs/synvert-core-javascript) provides a DSL to rewrite javascript code.
+[synvert-core-javascript](https://github.com/xinminlabs/synvert-core-javascript) provides a set of DSLs to rewrite javascript code.
 
 [synvert-snippets-javascript](https://github.com/xinminlabs/synvert-snippets-javascript) provides official snippets to
 rewrite javascript code.
@@ -127,7 +127,7 @@ $ synvert-javascript -s jquery/migrate
 
 #### Run a snippet
 
-Run a snippet, analyze and then change code.
+Run a snippet, analyze and then rewrite code.
 
 ```
 $ synvert-javascript -r jquery/migrate
