@@ -152,7 +152,7 @@ Synvert GUI is a Windows and Mac app to use synvert.
 
 ![Search snippet](demos/search-snippet-1.gif)
 
-- Generate a snippet. You can generate a snippet by some input codes and output codes.
+- Generate a snippet. You can generate a snippet by adding some input codes and output codes.
 
 ![Generate snippet](demos/generate-snippet-1.gif)
 
