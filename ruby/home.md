@@ -1,6 +1,7 @@
 ---
 layout: ruby
 title: synvert-ruby
+redirect_to: /
 ---
 
 [synvert-ruby](https://github.com/xinminlabs/synvert-ruby) is a command tool to rewrite ruby code automatically,

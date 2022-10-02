@@ -1,6 +1,7 @@
 ---
 layout: javascript
 title: synvert-javascript
+redirect_to: /
 ---
 
 [synvert-javascript](https://github.com/xinminlabs/synvert-javascript) is a command tool to rewrite javascript code automatically, it depends on `synvert-core-javascript` and `synvert-snippets-javascript`.
