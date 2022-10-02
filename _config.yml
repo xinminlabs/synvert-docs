@@ -8,7 +8,7 @@ permalink:        pretty
 # Setup
 title:            Synvert
 tagline:          'syntax + convert'
-description:      'write snippet code to rewrite your project code.'
+description:      'write snippet code to rewrite your source code.'
 url:              https://synvert.net
 
 author:

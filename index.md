@@ -3,7 +3,7 @@ layout: default
 title: Synvert
 ---
 
-Synvert provides a complete solution to rewrite (refactor) the source code.
+Synvert (short for syntax + convert) provides a complete solution to rewrite (refactor) the source code.
 
 Different than linter tools (e.g. rubocop) and codemod tools (e.g. jscodeshift),
 synvert allows you to write snippet code to rewrite your source code.
