@@ -1,5 +1,10 @@
 ---
-layout: page
+layout: default
 title: Examples
-redirect_to: /ruby/examples/
 ---
+
+<ul>
+    {% for post in site.posts %}
+        <li><a href="{{ post.url | relative_url }}">{{post.title}}</a></li>
+    {% endfor %}
+</ul>
