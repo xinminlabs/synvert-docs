@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Examples
+title: Use Cases
 ---
 
 <ul>
