@@ -162,4 +162,6 @@ Synvert VSCode extension can be downloaded [here](https://marketplace.visualstud
 
 ## Synvert Web (Playground)
 
-[Synvert Web](https://playground.synvert.net/){:target="_blank"} is a web interface to give synvert a try.
+[Synvert Playground](https://playground.synvert.net/){:target="_blank"} is a web interface to play with synvert.
+
+[Node Playground](https://node-playground.synvert.net/){:target="_blank"} is a web interface to play with node query and node mutation.
