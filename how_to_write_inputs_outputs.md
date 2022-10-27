@@ -8,10 +8,16 @@ title: How to write inputs / outputs
 ```javascript
 // bad
 const inputs = [
-  "$.isArray(foobar); throw Error();"
+  `
+    $.isArray(foobar)
+    throw Error()
+  `
 ]
 const outputs = [
-  "Array.isArray(foobar); throw new Error();"
+  `
+    Array.isArray(foobar)
+    throw new Error()
+  `
 ]
 
 // good
@@ -45,4 +51,32 @@ const outputs = [
   "Array.isArray(foobar)",
   "Array.isArray(array)",
 ]
+```
+
+* Write as small as possible
+
+```javascript
+// bad
+const inputs = [
+  `
+    class PasswordField extends React.Component {
+      render() {
+        return <Field name="password" type="password" />
+      }
+    }
+  `
+]
+const outputs = [
+  `
+    class PasswordField extends React.Component {
+      render() {
+        return <Field name="password" type="password" autoComplete="current-password" />
+      }
+    }
+  `
+]
+
+// good
+const inputs = ['<Field name="password" type="password" />']
+const outputs = ['<Field name="password" type="password" autoComplete="current-password" />']
 ```
