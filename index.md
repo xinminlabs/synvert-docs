@@ -31,6 +31,7 @@ It supports Typescript, Javascript and Ruby so far.
   - [Features](#features-1)
   - [Download](#download-1)
 - [Synvert Web (Playground)](#synvert-web-playground)
+- [Why named "Synvert"?](#why-named-synvert)
 
 ![Synvert Component]({{ site.baseurl }}/img/synvert-component.png)
 
@@ -160,3 +161,7 @@ Synvert VSCode extension can be downloaded [here](https://marketplace.visualstud
 [Synvert Playground](https://playground.synvert.net/){:target="_blank"} is a web interface to play with synvert.
 
 [Node Playground](https://node-playground.synvert.net/){:target="_blank"} is a web interface to play with node query and node mutation.
+
+## Why named "Synvert"?
+
+The name "Synvert" is a combination of "Syntax" and "Convert".
