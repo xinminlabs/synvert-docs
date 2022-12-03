@@ -119,18 +119,13 @@ Synvert GUI is a Windows and Mac app to use synvert.
 
 ### Features
 
-- List official snippets, show a snippet and its source code.
-
-![GUI Snippet Show Screenshot]({{ site.baseurl }}/img/gui_snippet_show_screenshot.png){:width="50%"}
-
 - Generate a snippet based on your inputs and outputs.
 
-![GUI Snippet New Single Screenshot]({{ site.baseurl }}/img//gui_snippet_new_single_screenshot.png){:width="50%"}
-![GUI Snippet New Multi Second Screenshot]({{ site.baseurl }}/img//gui_snippet_new_multi_second_screenshot.png){:width="50%"}
+![GUI Generate Snippet]({{ site.baseurl }}/img//gui-generate-snippet.png){:width="50%"}
 
-- Run a snippet on your workspace, show diff code and commit changes.
+- List search results based on the snippet code.
 
-![GUI Snippet Diff Screenshot]({{ site.baseurl }}/img//gui_snippet_diff_screenshot.png){:width="50%"}
+![GUI Search Results]({{ site.baseurl }}/img//gui-search-results.png){:width="50%"}
 
 ### Download
 
