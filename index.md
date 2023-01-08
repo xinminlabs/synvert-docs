@@ -122,11 +122,11 @@ Synvert GUI is a Windows and Mac app to use synvert.
 
 - Generate a snippet based on your inputs and outputs.
 
-![GUI Generate Snippet]({{ site.baseurl }}/img//gui-generate-snippet.png){:width="50%"}
+![GUI Generate Snippet]({{ site.baseurl }}/img/gui-generate-snippet.png){:width="50%"}
 
 - List search results based on the snippet code.
 
-![GUI Search Results]({{ site.baseurl }}/img//gui-search-results.png){:width="50%"}
+![GUI Search Results]({{ site.baseurl }}/img/gui-search-results.png){:width="50%"}
 
 ### Download
 
