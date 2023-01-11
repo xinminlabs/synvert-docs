@@ -10,3 +10,27 @@ nav a.current {
   float: right;
   margin: 1rem;
 }
+.sections {
+  margin: 50px 0;
+}
+.sections .section:nth-child(odd) {
+  background-color: var(--accent-bg);
+}
+.sections .section {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+}
+.sections .text {
+  flex-grow: 1;
+}
+.sections img {
+  width: 50%;
+}
+.sections .section:nth-child(odd) img {
+  padding-left: 50px;
+}
+
+.sections .section:nth-child(even) img {
+  padding-right: 50px;
+}
