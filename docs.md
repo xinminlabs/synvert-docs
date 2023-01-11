@@ -25,7 +25,7 @@ and synvert can automatically generate the snippet code for most cases.
 - [Synvert Web (Playground)](#synvert-web-playground)
 - [Why named "Synvert"?](#why-named-synvert)
 
-![Synvert Component]({{ site.baseurl }}/img/synvert-component.png)
+![Synvert Component]({{ site.baseurl }}/assets/img/synvert-component.png)
 
 ## Node Query
 
@@ -114,11 +114,11 @@ Synvert GUI is a Windows and Mac app to use synvert.
 
 - Generate a snippet based on your inputs and outputs.
 
-![GUI Generate Snippet]({{ site.baseurl }}/img/gui-generate-snippet.png){:width="50%"}
+![GUI Generate Snippet]({{ site.baseurl }}/assets/img/gui-generate-snippet.png){:width="50%"}
 
 - List search results based on the snippet code.
 
-![GUI Search Results]({{ site.baseurl }}/img/gui-search-results.png){:width="50%"}
+![GUI Search Results]({{ site.baseurl }}/assets/img/gui-search-results.png){:width="50%"}
 
 ### Download
 
@@ -134,15 +134,15 @@ Synvert GUI is a Windows and Mac app to use synvert.
 
 - Search and replace. After adding a snippet, you can search the code, and replace all or any of the results.
 
-![Search and Replace](demos/search-and-replace-1.gif)
+![Search and Replace]({{ site.baseurl }}/assets/img/vscode-search-and-replace.gif)
 
 - Search a snippet. You can search a snippet by group, name or description.
 
-![Search snippet](demos/search-snippet-1.gif)
+![Search snippet]({{ site.baseurl }}/assets/img/vscode-search-snippet.gif)
 
 - Generate a snippet. You can generate a snippet by adding some input codes and output codes.
 
-![Generate snippet](demos/generate-snippet-1.gif)
+![Generate snippet]({{ site.baseurl }}/assets/img/vscode-generate-snippet.gif)
 
 ### Download
 
