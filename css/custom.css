@@ -10,6 +10,15 @@ nav a.current {
   float: right;
   margin: 1rem;
 }
+.downloads {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+.downloads a {
+  text-decoration: none;
+  margin: 0 20px;
+}
 .sections {
   margin: 50px 0;
 }
