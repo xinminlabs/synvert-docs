@@ -3,10 +3,6 @@ layout: default
 title: Synvert
 ---
 
-Different than other linter tools (e.g. rubocop) or codemod tools (e.g. jscodeshift),
-synvert allows you to write snippet code to rewrite your source code,
-and synvert can automatically generate the snippet code for most cases.
-
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
