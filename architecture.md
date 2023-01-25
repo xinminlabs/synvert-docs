@@ -21,23 +21,11 @@ title: Synvert
 - [Synvert Web (Playground)](#synvert-web-playground)
 - [Why named "Synvert"?](#why-named-synvert)
 
-![Synvert Component]({{ site.baseurl }}/assets/img/synvert-component.png)
+![Synvert Component]({{ site.baseurl }}/assets/img/synvert-component.png){:width="50%"}
 
 ## Node Query
 
 It defines a NQL (node query language) and node rules to query AST nodes.
-
-e.g. to match javascript code `string.match(/unicorn/)`
-
-NQL can be
-```
-.CallExpression[expression=.PropertyAccessExpression[name=match]][arguments.length=1][arguments.0=.RegularExpressionLiteral]
-```
-
-Node rules can be
-```javascript
-{ nodeType: "CallExpression", expression: { nodeType: "PropertyAccessExpression", name: "match" }, arguments: { length: 1, 0: { nodeType: "RegularExpressionLiteral" } } }
-```
 
 The ruby version is [here](https://github.com/xinminlabs/node-query-ruby){:target="_blank"}.
 
@@ -47,36 +35,13 @@ The javascript/typescript version is [here](https://github.com/xinminlabs/node-q
 
 It provides a set of APIs to rewrite AST node source code.
 
-e.g. to replace javascript code `string.match(/unicorn/)` with `/unicorn/.test(string)`.
-
-```javascript
-{% raw %}replaceWith("{{arguments.0}}.test({{expression.expression}})");{% endraw %}
-```
-
 The ruby version is [here](https://github.com/xinminlabs/node-mutation-ruby){:target="_blank"}.
 
 The javascript/typescript version is [here](https://github.com/xinminlabs/node-mutation-javascript){:target="_blank"}.
 
 ## Synvert Core
 
-Synvert core defines a set of DSLs to rewrite code.
-
-e.g. to find javascript code `string.match(/unicorn/)` and replace it with `/unicorn/.test(string)`.
-
-```javascript
-const Synvert = require("synvert-core");
-
-new Synvert.Rewriter("javascript", "prefer-regexp-test", () => {
-  description("string.match(/unicorn/) => /unicorn/.test(string)");
-
-  configure({ parser: "typescript" });
-  withinFiles(Synvert.ALL_FILES, () => {
-    findNode(`.CallExpression[expression=.PropertyAccessExpression[name=match]][arguments.length=1][arguments.0=.RegularExpressionLiteral]`, () => {
-      {% raw %}replaceWith("{{arguments.0}}.test({{expression.expression}})");{% endraw %}
-    });
-  });
-});
-```
+Synvert core defines a set of DSLs to query and rewrite code.
 
 The ruby version is [here](https://github.com/xinminlabs/synvert-core-ruby){:target="_blank"}.
 
@@ -130,15 +95,15 @@ Synvert GUI is a Windows and Mac app to use synvert.
 
 - Search and replace. After adding a snippet, you can search the code, and replace all or any of the results.
 
-![Search and Replace]({{ site.baseurl }}/assets/img/vscode-search-and-replace.gif)
+![Search and Replace]({{ site.baseurl }}/assets/img/vscode-search-and-replace.gif){:width="50%"}
 
 - Search a snippet. You can search a snippet by group, name or description.
 
-![Search snippet]({{ site.baseurl }}/assets/img/vscode-search-snippet.gif)
+![Search snippet]({{ site.baseurl }}/assets/img/vscode-search-snippet.gif){:width="50%"}
 
 - Generate a snippet. You can generate a snippet by adding some input codes and output codes.
 
-![Generate snippet]({{ site.baseurl }}/assets/img/vscode-generate-snippet.gif)
+![Generate snippet]({{ site.baseurl }}/assets/img/vscode-generate-snippet.gif){:width="50%"}
 
 ### Download
 
