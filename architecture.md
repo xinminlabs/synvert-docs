@@ -99,11 +99,11 @@ Synvert GUI is a Windows and Mac app to use synvert.
 
 - Search a snippet. You can search a snippet by group, name or description.
 
-![Search snippet]({{ site.baseurl }}/assets/img/vscode-search-snippet.gif){:width="50%"}
+![Search snippet]({{ site.baseurl }}/assets/img/vscode-search-snippet.gif)
 
 - Generate a snippet. You can generate a snippet by adding some input codes and output codes.
 
-![Generate snippet]({{ site.baseurl }}/assets/img/vscode-generate-snippet.gif){:width="50%"}
+![Generate snippet]({{ site.baseurl }}/assets/img/vscode-generate-snippet.gif)
 
 ### Download
 
