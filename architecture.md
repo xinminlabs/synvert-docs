@@ -41,7 +41,7 @@ The javascript/typescript version is [here](https://github.com/xinminlabs/node-m
 
 ## Synvert Core
 
-Synvert core defines a set of DSLs to query and rewrite code.
+Synvert core makes use of node query and node mutation to define a set of DSLs to query and rewrite code.
 
 The ruby version is [here](https://github.com/xinminlabs/synvert-core-ruby){:target="_blank"}.
 

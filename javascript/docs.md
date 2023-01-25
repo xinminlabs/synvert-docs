@@ -181,7 +181,7 @@ removeFile("jest.config.js");
 ```javascript
 addSnippet("jquery", "deprecate-event-shorthand");
 addSnippet("javascript/no-useless-constructor");
-addSnippet("https://raw.githubusercontent.com/xinminlabs/synvert-snippets-javascript/main/lib/javascript/no-useless-constructor.js");
+addSnippet("https://github.com/xinminlabs/synvert-snippets-javascript/blob/main/lib/javascript/no-useless-constructor.js");
 addSnippet("/Users/flyerhzm/.synvert-javascript/lib/javascript/no-useless-constructor.js");
 ```
 
