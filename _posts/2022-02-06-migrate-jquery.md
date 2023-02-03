@@ -1,5 +1,5 @@
 ---
-layout: javascript
+layout: default
 title: Use synvert to migrate jQuery
 date: 2022-02-06
 categories: javascript

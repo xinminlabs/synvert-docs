@@ -1,5 +1,5 @@
 ---
-layout: javascript
+layout: default
 title: Use synvert to add autocomplete attribute to jsx project
 date: 2023-02-03
 categories: javascript

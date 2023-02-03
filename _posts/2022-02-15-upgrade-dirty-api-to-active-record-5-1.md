@@ -1,5 +1,5 @@
 ---
-layout: ruby
+layout: default
 title: Use synvert to upgrade Dirty API to ActiveRecord 5.1
 date: 2022-02-15
 categories: ruby
