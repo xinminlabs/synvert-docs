@@ -5,11 +5,6 @@ nav a.current {
   color: var(--accent) !important;
   border-color: var(--accent);
 }
-#languages {
-  width: 150px;
-  float: right;
-  margin: 1rem;
-}
 .downloads {
   display: flex;
   flex-wrap: wrap;
