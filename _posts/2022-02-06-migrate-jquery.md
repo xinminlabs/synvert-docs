@@ -3,7 +3,7 @@ layout: javascript
 title: Use synvert to migrate jQuery
 date: 2022-02-06
 categories: javascript
-permalink: /:categories/:title
+permalink: /:categories/:title/index.html
 ---
 
 > **TL;DR** you can run `synvert-javascript --run jquery/migrate --path <project_path>`

@@ -3,7 +3,7 @@ layout: ruby
 title: Use synvert to upgrade Dirty API to ActiveRecord 5.1
 date: 2022-02-15
 categories: ruby
-permalink: /:categories/:title
+permalink: /:categories/:title/index.html
 ---
 
 > **TL;DR** you can run `synvert-ruby -r rails/convert_active_record_dirty_5_0_to_5_1 <project_path>`

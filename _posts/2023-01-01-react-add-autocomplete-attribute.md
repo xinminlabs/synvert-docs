@@ -3,7 +3,7 @@ layout: javascript
 title: Use synvert to add autocomplete attribute to jsx project
 date: 2023-02-03
 categories: javascript
-permalink: /:categories/:title
+permalink: /:categories/:title/index.html
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-9xj7J1oVHo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
