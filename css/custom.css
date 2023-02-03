@@ -12,6 +12,7 @@ nav a.current {
 }
 .downloads {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 50px 0;
 }
