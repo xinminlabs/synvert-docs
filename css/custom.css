@@ -40,7 +40,9 @@ nav a.current {
 .sections .section:nth-child(odd) img {
   padding-left: 50px;
 }
-
 .sections .section:nth-child(even) img {
   padding-right: 50px;
+}
+pre code {
+  color: white;
 }
