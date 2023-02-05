@@ -46,37 +46,37 @@ $ synvert-javascript --run javascript/no-unused-imports
 Specify the repository path
 
 ```
-$ synvert-javascript --run javascript/no-unused-imports --rootPath ~/Sites/xinminlabs/awesomecode.io
+$ synvert-javascript --run javascript/no-unused-imports --root-path ~/Sites/xinminlabs/awesomecode.io
 ```
 
 Run a snippet from remote url
 
 ```
-$ synvert-javascript --run https://raw.githubusercontent.com/xinminlabs/synvert-snippets-javascript/master/lib/javascript/no-unused-imports.js --rootPath ~/Sites/xinminlabs/awesomecode.io
+$ synvert-javascript --run https://raw.githubusercontent.com/xinminlabs/synvert-snippets-javascript/master/lib/javascript/no-unused-imports.js --root-path ~/Sites/xinminlabs/awesomecode.io
 ```
 
 Run a snippet from local file path
 
 ```
-$ synvert-javascript --run ~/.synvert-javascript/lib/javascript/no-unused-imports.js --rootPath ~/Sites/xinminlabs/awesomecode.io
+$ synvert-javascript --run ~/.synvert-javascript/lib/javascript/no-unused-imports.js --root-path ~/Sites/xinminlabs/awesomecode.io
 ```
 
 Skip paths
 
 ```
-$ synvert-javascript --run javascript/no-unused-imports --skipPaths "node_modules/**,dist/**" --rootPath ~/Sites/xinminlabs/awesomecode.io
+$ synvert-javascript --run javascript/no-unused-imports --skip-paths "node_modules/**,dist/**" --root-path ~/Sites/xinminlabs/awesomecode.io
 ```
 
 Only paths
 
 ```
-$ synvert-javascript --run javascript/no-unused-imports --onlyPaths frontend/src/ --rootPath ~/Sites/xinminlabs/awesomecode.io
+$ synvert-javascript --run javascript/no-unused-imports --only-paths frontend/src/ --root-path ~/Sites/xinminlabs/awesomecode.io
 ```
 
 Show processing files when running a snippet.
 
 ```
-$ synvert-javascript --run javascript/no-unused-imports --showRunProcess --rootPath ~/Sites/xinminlabs/awesomecode.io
+$ synvert-javascript --run javascript/no-unused-imports --show-run-process --root-path ~/Sites/xinminlabs/awesomecode.io
 ```
 
 ## Synvert Snippet

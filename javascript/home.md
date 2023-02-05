@@ -94,7 +94,7 @@ OPTIONS
   -v, --version
   --enableEcmaFeaturesJsx  enable EcmaFeatures jsx
   --path=path              [default: .] project path
-  --showRunProcess         show processing files when running a snippet
+  --show-run-process         show processing files when running a snippet
   --skipFiles=skipFiles    [default: node_modules/**] skip files, splitted by comma
   --sync                   sync snippets
 ```
@@ -145,7 +145,7 @@ $ synvert-javascript --load ~/Sites/xinminlabs/synvert-snippets-javascript/lib/j
 Show processing files when running a snippet.
 
 ```
-$ synvert-javascript -r javascript/trailing-comma --showRunProcess
+$ synvert-javascript -r javascript/trailing-comma --show-run-process
 ```
 
 Enable EcmaFeatures jsx.
