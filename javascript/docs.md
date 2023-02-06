@@ -461,7 +461,6 @@ callHelper("helpers/remove-imports", { importNames: ["Component", "Fragment"] })
 
 * [filePath](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#filePath) - get the file path
 * [currentNode](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#currentNode) - current ast node
-* [queryAdapter](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#queryAdapter) - get a [query adapter](https://github.com/xinminlabs/node-query-javascript/blob/main/src/adapter.ts) to get some helper methods
 * [mutationAdapter](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#mutationAdapter) - get a [mutation adapter](https://github.com/xinminlabs/node-mutation-javascript/blob/main/src/adapter.ts) to get some helper methods
 
 ### Query Nodes
