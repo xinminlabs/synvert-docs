@@ -13,6 +13,6 @@ title: Use Cases
 <h3>Ruby</h3>
 <ul>
     <li>
-        <a href="/ruby/factory-bot-use-short-synatx/index.html">Use synvert to use factory_bot short syntax</a>
+        <a href="/ruby/factory-bot-use-short-syntax/index.html">Use synvert to use factory_bot short syntax</a>
     </li>
 </ul>
