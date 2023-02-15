@@ -13,7 +13,7 @@ The HTML `autocomplete` attribute lets web developers specify what if any permis
 I get a task to add autocomplete to an existing react project. In this react project, we have some react code that looks like this:
 
 ```jsx
-<Field name="email" type="text" />
+<Field name="email" type="email" />
 <Field name="password" type="password" />
 <Field name="new_password" type="password" />
 ```
@@ -21,7 +21,7 @@ I get a task to add autocomplete to an existing react project. In this react pro
 We want to add autocomplete attribute to the field elements, so the code will become:
 
 ```jsx
-<Field name="email" type="text" autoComplete="email" />
+<Field name="email" type="email" autoComplete="email" />
 <Field name="password" type="password" autoComplete="current-password" />
 <Field name="new_password" type="password" autoComplete="new-password" />
 ```
