@@ -18,7 +18,7 @@ I get a task to add autocomplete to an existing react project. In this react pro
 <Field name="new_password" type="password" />
 ```
 
-We want to add autocomplete attribute to the field elements, so the code will become:
+We want to add `autoComplete` attribute to the Field elements, so the code will become:
 
 ```jsx
 <Field name="email" type="email" autoComplete="email" />
@@ -26,7 +26,7 @@ We want to add autocomplete attribute to the field elements, so the code will be
 <Field name="new_password" type="password" autoComplete="new-password" />
 ```
 
-It's time to use Synvert to automatically convert the code. First, I open the Synvert app, set file pattern as `**/*.jsx`, the input as `<Field name="email" type="email" />` and output as `<Field name="email" type="email" autoComplete="email" />`, then click the "Generate Snippet" button, it will generate the snippet as follows:
+It's time to use Synvert to automatically convert the code. First, I open the Synvert application, set the file pattern as `**/*.jsx`, the input as `<Field name="email" type="email" />`, and the output as `<Field name="email" type="email" autoComplete="email" />`, then click the "Generate Snippet" button, it will generate the snippet as follows:
 
 ```javascript
 const Synvert = require("synvert-core");
@@ -52,7 +52,7 @@ We want to find a `Field` element, no matter how many properties it has, so remo
 
 As long as it has a property whose name is `name` and value is `email`, no matter its position, so replace `.0=` with `includes`.
 
-Same to the type property, replace `.1=` with `includes`.
+Same as the type property, replace `.1=` with `includes`.
 
 Then the snippet becomes:
 
@@ -73,13 +73,13 @@ new Synvert.Rewriter("group", "name", () => {
 });
 ```
 
-Now we can search in the project, it finds the the email Field, and inserts `autoComplete="email"`, then we can click "replace" icon to add the autocomplete attribute.
+Now we can search in the project, it finds the email Field, and inserts `autoComplete="email"`, then we can click the "Replace" icon to add the `autoComplete` attribute.
 
 ![Add autocompete attribute 1]({{ site.baseurl }}/img/react-add-autocomplete-attribute-1.png)
 
-Okay, we have added the autocomplete attribute, what about we do search again?
+Okay, we have added the `autoComplete` attribute, what about we search again?
 
-Oh, that's bad, it finds that field again and tries to add the duplicated autocomplete attribute.
+Oh, that's bad, it finds that Field again and tries to add the duplicated `autoComplete` attribute.
 
 ![Add autocompete attribute 2]({{ site.baseurl }}/img/react-add-autocomplete-attribute-2.png)
 
@@ -103,9 +103,9 @@ new Synvert.Rewriter("group", "name", () => {
 });
 ```
 
-Then we click "Search" button, no file is affected by the snippet, cool.
+Then we click "Search" button, and no file is affected by the snippet, cool.
 
-So far the snippet works well for `email` field, let's add `autoComplte` to support password fields.
+So far the snippet works well for `email` Field, let's add `autoComplte` to support password Fields.
 
 Synvert snippet is a javascript code, so we just need to make the `email` to be a variable. So the new snippet becomes:
 
@@ -134,13 +134,13 @@ new Synvert.Rewriter("group", "name", () => {
 });
 ```
 
-Then we click "Search" button, it finds the password fields.
+Then we click the "Search" button, it finds the password Fields.
 
 ![Add autocompete attribute 3]({{ site.baseurl }}/img/react-add-autocomplete-attribute-3.png)
 
 We can add `autoComplete` attributes to these fields by clicking the "Replace All" button.
 
-If you want to support more field types, just add more patterns to the `PATTERNS` array. e.g.
+If you want to support more field types, just add more patterns to the `PATTERNS` constant. e.g.
 
 ```javascript
   const PATTERNS = [
@@ -151,4 +151,4 @@ If you want to support more field types, just add more patterns to the `PATTERNS
   ];
 ```
 
-The official snippet is [here](https://github.com/xinminlabs/synvert-snippets-javascript/blob/main/lib/react/add-autocomplete-attribute.js), it takes care of input tag and use `insertAfter` for multi-lines Field.
+The official snippet is [here](https://github.com/xinminlabs/synvert-snippets-javascript/blob/main/lib/react/add-autocomplete-attribute.js), it takes care of the input tag and uses `insertAfter` for multi-line Fields.
