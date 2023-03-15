@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Migrate JQuery Part 1
-date: 2023-02-13
+date: 2023-03-03
 categories: javascript
 permalink: /:categories/:title/index.html
 ---

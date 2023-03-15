@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Use synvert to use factory_bot short syntax
-date: 2023-02-13
+date: 2023-02-24
 categories: ruby
 permalink: /:categories/:title/index.html
 ---

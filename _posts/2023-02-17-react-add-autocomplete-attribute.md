@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Use synvert to add autocomplete attribute to jsx project
-date: 2023-02-03
+date: 2023-02-17
 categories: javascript
 permalink: /:categories/:title/index.html
 ---
