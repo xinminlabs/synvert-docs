@@ -296,6 +296,7 @@ end
 * [insert](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#insert-instance_method) - insert code
   * option `at`, `beginning` or `end` (default), insert code at the beginning or end of the current node
   * option `to`, insert code to the child node of the current node
+  * option `add_comma`, `true` or `false` (default), add extra comma
 
 ```ruby
 # open('http://test.com')
@@ -315,7 +316,17 @@ find_node '.send[receiver=user][message=name]' do
 end
 ```
 
+```ruby
+# test(foo)
+# =>
+# test(foo, bar)
+find_node '.send[message=test][arguments.size=1][arguments.first=foo]' do
+  insert 'bar', to: 'arguments.0', and_comma: true
+end
+```
+
 * [insert_after](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#insert_after-instance_method) - insert the code next to the current node
+  * option `add_comma`, `true` or `false` (default), add extra comma
 
 ```ruby
 {% raw %}# Synvert::Application.config.secret_token = "0447aa931d42918bfb934750bb78257088fb671186b5d1b6f9fddf126fc8a14d34f1d045cefab3900751c3da121a8dd929aec9bafe975f1cabb48232b4002e4e"
@@ -328,6 +339,7 @@ end{% endraw %}
 ```
 
 * [insert_before](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#insert_before-instance_method) - insert the code previous to the current node
+  * option `add_comma`, `true` or `false` (default), add extra comma
 
 ```ruby
 {% raw %}# Synvert::Application.config.secret_token = "0447aa931d42918bfb934750bb78257088fb671186b5d1b6f9fddf126fc8a14d34f1d045cefab3900751c3da121a8dd929aec9bafe975f1cabb48232b4002e4e"
@@ -362,6 +374,7 @@ end{% endraw %}
 ```
 
 * [delete](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#delete-instance_method) - delete the code in the specified child nodes
+  * option `add_comma`, `true` or `false` (default), delete extra comma
 
 ```ruby
 # FactoryBot.create(...)
