@@ -374,6 +374,7 @@ end{% endraw %}
 ```
 
 * [delete](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#delete-instance_method) - delete the code in the specified child nodes
+  * *selectors, selector names of child node.
   * option `add_comma`, `true` or `false` (default), delete extra comma
 
 ```ruby
@@ -388,6 +389,7 @@ end
 ```
 
 * [remove](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#remove-instance_method) - remove the whole code of current node.
+  * option `add_comma`, `true` or `false` (default), delete extra comma
 
 ```ruby
 # removes puts and p methods
