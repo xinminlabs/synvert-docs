@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Upgrade rails 4.2 to 5.0 Part 1
-date: 2023-03-24
+date: 2023-03-31
 categories: ruby
 permalink: /:categories/:title/index.html
 ---
