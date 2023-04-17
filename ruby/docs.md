@@ -398,7 +398,7 @@ find_node '.send[receiver=nil][message IN (puts p)]' do
 end
 ```
 
-* [wrap](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#wrap-instance_method) - wrap the current node with code
+* [wrap](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#wrap-instance_method) - wrap the current node with prefix and suffix code.
 
 ```ruby
 # class Bar < Base
@@ -409,7 +409,7 @@ end
 #   end
 # end
 find_node '.class[name=Bar]' do
-  wrap with: 'module Foo'
+  wrap prefix: 'module Foo', suffix: 'end', newline: true
 end
 ```
 
