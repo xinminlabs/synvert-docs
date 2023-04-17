@@ -293,6 +293,20 @@ find_node '.class[parent_class=Minitest::Test] .def[name=setup]:not_has(> .super
 end
 ```
 
+* [indent](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#indent-instance_method) - indent code
+  * option `tab_size`, default is 1
+
+```ruby
+# class Foobar
+# end
+# =>
+#   class Foobar
+#   end
+find_node '.class' do
+  indent
+end
+```
+
 * [insert](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#insert-instance_method) - insert code
   * option `at`, `beginning` or `end` (default), insert code at the beginning or end of the current node
   * option `to`, insert code to the child node of the current node
