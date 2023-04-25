@@ -6,8 +6,6 @@ categories: javascript
 permalink: /:categories/:title/index.html
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-9xj7J1oVHo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 The HTML `autocomplete` attribute lets web developers specify what if any permission the user agent has to provide automated assistance in filling out form field values, as well as guidance to the browser as to the type of information expected in the field. See more [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete).
 
 I get a task to add autocomplete to an existing react project. In this react project, we have some react code that looks like this:

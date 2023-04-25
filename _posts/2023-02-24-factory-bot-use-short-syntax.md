@@ -6,8 +6,6 @@ categories: ruby
 permalink: /:categories/:title/index.html
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7TrKQWUcArU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 It's a long time since FactoryBot or FactoryGirl introduced short syntax, but it is still a good example to show how to use Synvert to refactor code.
 
 The original syntax of FactoryBot is:
