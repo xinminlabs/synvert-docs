@@ -83,9 +83,9 @@ Synvert GUI is a Windows and Mac app to use synvert.
 
 ### Download
 
-[Mac OS](https://download-synvert.xinminlabs.com/download/latest/osx)
+<a id="mac-download" href="#">Mac App</a>
 
-[Windows x64](https://download-synvert.xinminlabs.com/download/latest/windows_64), it's not signed and Microsoft SmartScreen will block it.
+<a id="win-download" href="#">Windows x64 App</a>, it's not signed and Microsoft SmartScreen will block it.
 
 ## Synvert VSCode Extension
 
