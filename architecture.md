@@ -83,7 +83,7 @@ Synvert GUI is a Windows and Mac app to use synvert.
 
 ### Download
 
-<a id="mac-download" href="#">Mac App</a>
+<a id="mac-download" href="#">Mac App</a>, it's not signed, you need to Open Anyway.
 
 <a id="win-download" href="#">Windows x64 App</a>, it's not signed and Microsoft SmartScreen will block it.
 
