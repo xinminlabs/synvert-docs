@@ -27,5 +27,4 @@ exclude:
   - deploy.sh
   - Dockerfile.prod
   - docker-nginx.conf
-  - sync_snippets.rb
   - _compress_images_cache.yml
