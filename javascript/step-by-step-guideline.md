@@ -30,7 +30,7 @@ to
 ### 1. Clone synvert-snippets-javascript repo
 
 ```bash
-$ git clone git@github.com:xinminlabs/synvert-snippets-javascript.git
+$ git clone git@github.com:synvert-hq/synvert-snippets-javascript.git
 $ cd synvert-snippets-javascript
 ```
 
@@ -364,7 +364,7 @@ withinFiles(Synvert.ALL_FILES, function () {
 We’ve already written the snippet and made tests passed, it’s time to use the snippet to change your repo’s code
 
 ```bash
-$ npx -p synvert synvert-javascript --run react/html-elements-to-react-bootstrap-components --load ~/Sites/xinminlabs/synvert-snippets-javascript/lib/react/html-elements-to-react-bootstrap-components.js --enableEcmaFeaturesJsx --path ~/Sites/xinminlabs/awesomecode.io/app/javascript
+$ npx -p synvert synvert-javascript --run react/html-elements-to-react-bootstrap-components --load ~/Sites/synvert-hq/synvert-snippets-javascript/lib/react/html-elements-to-react-bootstrap-components.js --enableEcmaFeaturesJsx --path ~/Sites/xinminlabs/awesomecode.io/app/javascript
 ```
 
 If you have installed the synvert npm, you can also use it with a remote snippet.

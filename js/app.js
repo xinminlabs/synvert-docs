@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   if (macDownloadLink) {
     macDownloadLink.addEventListener('click', function(event) {
       event.preventDefault();
-      fetch('https://api.github.com/repos/xinminlabs/synvert-gui/releases/latest')
+      fetch('https://api.github.com/repos/synvert-hq/synvert-gui/releases/latest')
         .then(response => response.json())
         .then(data => {
           const zipAsset = data.assets.find(asset => asset.content_type === 'application/zip');
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   if (winDownloadLink) {
     winDownloadLink.addEventListener('click', function(event) {
       event.preventDefault();
-      fetch('https://api.github.com/repos/xinminlabs/synvert-gui/releases/latest')
+      fetch('https://api.github.com/repos/synvert-hq/synvert-gui/releases/latest')
         .then(response => response.json())
         .then(data => {
           const zipAsset = data.assets.find(asset => asset.content_type === 'application/x-msdos-program');

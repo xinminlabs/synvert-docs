@@ -201,4 +201,4 @@ within_files Synvert::RAILS_MODEL_FILES + Synvert::RAILS_OBSERVER_FILES do
 end
 ```
 
-There are some other edge cases that I didn't cover here, e.g. if user defined a method `password_changed?`, I won't convert it to `saved_change_to_password?` or `will_save_change_to_password?`. To get the full snippet code, please check it out [here](https://github.com/xinminlabs/synvert-snippets-ruby/blob/master/lib/rails/convert_active_record_dirty_5_0_to_5_1.rb).
+There are some other edge cases that I didn't cover here, e.g. if user defined a method `password_changed?`, I won't convert it to `saved_change_to_password?` or `will_save_change_to_password?`. To get the full snippet code, please check it out [here](https://github.com/synvert-hq/synvert-snippets-ruby/blob/master/lib/rails/convert_active_record_dirty_5_0_to_5_1.rb).

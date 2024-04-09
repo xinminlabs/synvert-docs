@@ -52,7 +52,7 @@ $ synvert-javascript --run javascript/no-unused-imports --root-path ~/Sites/xinm
 Run a snippet from remote url
 
 ```
-$ synvert-javascript --run https://raw.githubusercontent.com/xinminlabs/synvert-snippets-javascript/master/lib/javascript/no-unused-imports.js --root-path ~/Sites/xinminlabs/awesomecode.io
+$ synvert-javascript --run https://raw.githubusercontent.com/synvert-hq/synvert-snippets-javascript/master/lib/javascript/no-unused-imports.js --root-path ~/Sites/xinminlabs/awesomecode.io
 ```
 
 Run a snippet from local file path
@@ -117,49 +117,49 @@ replace with `$().on('click', fn)` and `$().on('submit', fn)` code.
 
 ### APIs
 
-[synvert-core](https://github.com/xinminlabs/synvert-core-javascript) provides a set of APIs to query and mutate code based on AST nodes.
+[synvert-core](https://github.com/synvert-hq/synvert-core-javascript) provides a set of APIs to query and mutate code based on AST nodes.
 
 #### General APIs
 
-* [configure](https://xinminlabs.github.io/synvert-core-javascript/Rewriter.html#configure) - configure the rewriter, set the parser.
+* [configure](https://synvert-hq.github.io/synvert-core-javascript/Rewriter.html#configure) - configure the rewriter, set the parser.
 
 ```javascript
 configure({ parser: Synvert.Parser.TYPESCRIPT });
 ```
 
-* [description](https://xinminlabs.github.io/synvert-core-javascript/Rewriter.html#description) - describe what the snippet does
+* [description](https://synvert-hq.github.io/synvert-core-javascript/Rewriter.html#description) - describe what the snippet does
 
 ```javascript
 description("describe what the snippet does");
 ```
 
-* [ifNode](https://xinminlabs.github.io/synvert-core-javascript/Rewriter.html#ifNode) - check if node version is greater than or equal to the specified node version
+* [ifNode](https://synvert-hq.github.io/synvert-core-javascript/Rewriter.html#ifNode) - check if node version is greater than or equal to the specified node version
 
 ```javascript
 ifNode("18.0.0")
 ```
 
-* [ifNpm](https://xinminlabs.github.io/synvert-core-javascript/Rewriter.html#ifNpm) - check the version of the specifid npm package
+* [ifNpm](https://synvert-hq.github.io/synvert-core-javascript/Rewriter.html#ifNpm) - check the version of the specifid npm package
 
 ```javascript
 ifNpm("jquery", ">= 3.6.0")
 ```
 
-* [withinFiles](https://xinminlabs.github.io/synvert-core-javascript/Rewriter.html#withinFiles) - find specified files
+* [withinFiles](https://synvert-hq.github.io/synvert-core-javascript/Rewriter.html#withinFiles) - find specified files
 
 ```javascript
 withinFiles("**/*.js", function () {
 });
 ```
 
-* [withinFile](https://xinminlabs.github.io/synvert-core-javascript/Rewriter.html#withinFile) - alias to withinFiles
+* [withinFile](https://synvert-hq.github.io/synvert-core-javascript/Rewriter.html#withinFile) - alias to withinFiles
 
 ```javascript
 withinFile("test/utils.js", function () {
 });
 ```
 
-* [addFile](https://xinminlabs.github.io/synvert-core-javascript/Rewriter.html#addFile) - add a new file
+* [addFile](https://synvert-hq.github.io/synvert-core-javascript/Rewriter.html#addFile) - add a new file
 
 ```javascript
 addFile("jest.config.js", `
@@ -170,18 +170,18 @@ module.exports = {
 `.trim());
 ```
 
-* [removeFile](https://xinminlabs.github.io/synvert-core-javascript/Rewriter.html#removeFile) - remove a file
+* [removeFile](https://synvert-hq.github.io/synvert-core-javascript/Rewriter.html#removeFile) - remove a file
 
 ```javascript
 removeFile("jest.config.js");
 ```
 
-* [addSnippet](https://xinminlabs.github.io/synvert-core-javascript/Rewriter.html#addSnippet) - call another snippet
+* [addSnippet](https://synvert-hq.github.io/synvert-core-javascript/Rewriter.html#addSnippet) - call another snippet
 
 ```javascript
 addSnippet("jquery", "deprecate-event-shorthand");
 addSnippet("javascript/no-useless-constructor");
-addSnippet("https://github.com/xinminlabs/synvert-snippets-javascript/blob/main/lib/javascript/no-useless-constructor.js");
+addSnippet("https://github.com/synvert-hq/synvert-snippets-javascript/blob/main/lib/javascript/no-useless-constructor.js");
 addSnippet("/Users/flyerhzm/.synvert-javascript/lib/javascript/no-useless-constructor.js");
 ```
 
@@ -189,7 +189,7 @@ addSnippet("/Users/flyerhzm/.synvert-javascript/lib/javascript/no-useless-constr
 
 You can use scope apis to find the matching nodes or move to the specified node.
 
-* [withinNode](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#withinNode) - recursively find matching ast nodes
+* [withinNode](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#withinNode) - recursively find matching ast nodes
 
 ```javascript
 // import React from "react"
@@ -197,9 +197,9 @@ withNode({ nodeType: "ImportDeclaration", importClause: { name: "React" }, modul
 });
 ```
 
-* [withNode](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#withNode) - alias to withNode
+* [withNode](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#withNode) - alias to withNode
 
-* [findNode](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#findNode) - alias to withNode
+* [findNode](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#findNode) - alias to withNode
 
 ```javascript
 // constructor () {}
@@ -207,7 +207,7 @@ findNode(".Constructor[parameters.length=0][body.statements.length=0]", () => {
 });
 ```
 
-* [gotoNode](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#gotoNode) - go to a child node
+* [gotoNode](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#gotoNode) - go to a child node
 
 ```javascript
 // import React, { useEffect, useState } from "react";
@@ -219,7 +219,7 @@ gotoNode("importClause.namedBindings", () => {
 
 You can use condition apis to check if the current node matches the rules.
 
-* [ifExistNode](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#ifExistNode) - check if matching node exist in the child nodes
+* [ifExistNode](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#ifExistNode) - check if matching node exist in the child nodes
 
 ```javascript
 ifExistNode(".CallExpression[expression=useState]", () => {
@@ -229,7 +229,7 @@ ifExistNode(".CallExpression[expression=useState]", () => {
 });
 ```
 
-* [unlessExistNode](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#unlessExistNode) - check if matching node does not exist in the child nodes
+* [unlessExistNode](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#unlessExistNode) - check if matching node does not exist in the child nodes
 
 ```javascript
 unlessExistNode('.ExpressionStatement[expression.text="use strict"]', () => {
@@ -239,7 +239,7 @@ unlessExistNode('.ExpressionStatement[expression.text="use strict"]', () => {
 });
 ```
 
-* [ifOnlyExistNode](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#ifOnlyExistNode) - check if current node has only one child node and the child node matches
+* [ifOnlyExistNode](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#ifOnlyExistNode) - check if current node has only one child node and the child node matches
 
 ```javascript
 ifOnlyExistNode(".ExpressionStatement[expression=.CallExpression[expression=.SuperKeyword]]", () => {
@@ -249,7 +249,7 @@ ifOnlyExistNode(".ExpressionStatement[expression=.CallExpression[expression=.Sup
 });
 ```
 
-* [ifAllNodes](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#ifAlNodes) - check if all nodes match or not
+* [ifAllNodes](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#ifAlNodes) - check if all nodes match or not
 
 ```javascript
 ifAllNodes(
@@ -268,7 +268,7 @@ ifAllNodes(
 
 You can use action apis to rewrite the source code.
 
-* [append](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#append) - append the code to the bottom of the current node body
+* [append](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#append) - append the code to the bottom of the current node body
 
 ```javascript
 // constructor() {
@@ -284,7 +284,7 @@ findNode(".Constructor", () => {
 });
 ```
 
-* [prepend](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#prepend) - prepend the code to the top of the current node body
+* [prepend](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#prepend) - prepend the code to the top of the current node body
 
 ```javascript
 // constructor() {
@@ -300,7 +300,7 @@ findNode(".Constructor", () => {
 });
 ```
 
-* [insert](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#insert) - insert code
+* [insert](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#insert) - insert code
   * option `at`, `beginning` or `end` (default), insert code at the beginning or end of the current node
   * option `to`, insert code to the child node of the current node
 
@@ -330,7 +330,7 @@ findNode(`.ObjectLiteralExpression[multiLine=true][properties.hasTrailingComma=f
 });
 ```
 
-* [insertAfter](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#insertAfter) - insert the code next to the current node
+* [insertAfter](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#insertAfter) - insert the code next to the current node
 
 ```javascript
 // <Field
@@ -357,7 +357,7 @@ findNode(
 );
 ```
 
-* [insertBefore](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#insertBefore) - insert the code previous to the current node
+* [insertBefore](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#insertBefore) - insert the code previous to the current node
 
 ```javascript
 // <Field
@@ -384,7 +384,7 @@ findNode(
 );
 ```
 
-* [replace](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#replace) - replace the code of specified child nodes
+* [replace](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#replace) - replace the code of specified child nodes
 
 ```javascript
 {% raw %}// foo.substr(start, length);
@@ -396,7 +396,7 @@ findNode(`.CallExpression[expression=.PropertyAccessExpression[name=substr]][arg
 });{% endraw %}
 ```
 
-* [deleteNode](https://xinminlabs.github.io/synvert-core-javascript/Instance#deleteNode) - delete code the code of specified child nodes
+* [deleteNode](https://synvert-hq.github.io/synvert-core-javascript/Instance#deleteNode) - delete code the code of specified child nodes
 
 ```javascript
 {% raw %}// const someObject = {
@@ -415,7 +415,7 @@ findNode(`.PropertyAssignment[name=.Identifier][initializer=.Identifier][key="{{
 });{% endraw %}
 ```
 
-* [remove](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#remove) - remove the whole code of current node
+* [remove](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#remove) - remove the whole code of current node
 
 ```javascript
 // class A {
@@ -430,7 +430,7 @@ findNode(".Constructor[parameters.length=0][body.statements.length=0]", () => {
 });
 ```
 
-* [replaceWith](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#replaceWith) - replace the whole code of current node
+* [replaceWith](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#replaceWith) - replace the whole code of current node
 
 ```javascript
 {% raw %}// string.match(/unicorn/)
@@ -444,28 +444,28 @@ findNode(
 );{% endraw %}
 ```
 
-* [noop](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#noop) - no operation
+* [noop](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#noop) - no operation
 
 #### Other APIs
 
-* [callHelper](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#callHelper) - call a helper to run shared code
+* [callHelper](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#callHelper) - call a helper to run shared code
 
 ```javascript
 // define helper in helpers/remove-imports.js
 callHelper("helpers/remove-imports", { importNames: ["Component", "Fragment"] })
 ```
 
-* [indent](https://xinminlabs.github.io/synvert-core-javascript/Instance#indent) - set proper indent of a string code
+* [indent](https://synvert-hq.github.io/synvert-core-javascript/Instance#indent) - set proper indent of a string code
 
 #### Attributes
 
-* [filePath](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#filePath) - get the file path
-* [currentNode](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#currentNode) - current ast node
-* [mutationAdapter](https://xinminlabs.github.io/synvert-core-javascript/Instance.html#mutationAdapter) - get a [mutation adapter](https://github.com/xinminlabs/node-mutation-javascript/blob/main/src/adapter.ts) to get some helper methods
+* [filePath](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#filePath) - get the file path
+* [currentNode](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#currentNode) - current ast node
+* [mutationAdapter](https://synvert-hq.github.io/synvert-core-javascript/Instance.html#mutationAdapter) - get a [mutation adapter](https://github.com/synvert-hq/node-mutation-javascript/blob/main/src/adapter.ts) to get some helper methods
 
 ### Query Nodes
 
-Synvert uses [node_query](https://www.npmjs.com/package/@xinminlabs/node-query) npm to query nodes,
+Synvert uses [node_query](https://www.npmjs.com/package/@synvert-hq/node-query) npm to query nodes,
 so that you can use NQL (node query language) or node rules to query AST nodes.
 
 #### Node Query Language

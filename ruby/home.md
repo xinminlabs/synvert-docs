@@ -4,12 +4,12 @@ title: synvert-ruby
 redirect_to: /
 ---
 
-[synvert-ruby](https://github.com/xinminlabs/synvert-ruby) is a command tool to rewrite ruby code automatically,
+[synvert-ruby](https://github.com/synvert-hq/synvert-ruby) is a command tool to rewrite ruby code automatically,
 it depends on `synvert-core-ruby` and `synvert-snippets-ruby`.
 
-[synvert-core-ruby](https://github.com/xinminlabs/synvert-core-ruby) provides a set of DSLs to rewrite ruby code.
+[synvert-core-ruby](https://github.com/synvert-hq/synvert-core-ruby) provides a set of DSLs to rewrite ruby code.
 
-[synvert-snippets-ruby](https://github.com/xinminlabs/synvert-snippets-ruby) provides official snippets to
+[synvert-snippets-ruby](https://github.com/synvert-hq/synvert-snippets-ruby) provides official snippets to
 rewrite ruby code.
 
 Here is an example of synvert snippet.
@@ -87,7 +87,7 @@ Usage: synvert-ruby [project_path]
 
 #### Sync snippets
 
-[Official Snippets](https://github.com/xinminlabs/synvert-snippets-ruby) are available on github,
+[Official Snippets](https://github.com/synvert-hq/synvert-snippets-ruby) are available on github,
 you can sync them any time you want.
 
 ```
@@ -126,19 +126,19 @@ $ synvert-ruby -o factory_bot/use_short_syntax
 Run a snippet, analyze and then rewrite code.
 
 ```
-$ synvert-ruby -r factory_bot/use_short_syntax ~/Sites/xinminlabs/synvert-core-ruby
+$ synvert-ruby -r factory_bot/use_short_syntax ~/Sites/synvert-hq/synvert-core-ruby
 ```
 
 Load custom snippet
 
 ```
-$ synvert-ruby --load ~/.custom-snippets/my-own-snippet.rb -r my-own-snippet ~/Sites/xinminlabs/synvert-core-ruby
+$ synvert-ruby --load ~/.custom-snippets/my-own-snippet.rb -r my-own-snippet ~/Sites/synvert-hq/synvert-core-ruby
 ```
 
 Show processing files when running a snippet.
 
 ```
-$ synvert-ruby -r factory_bot/use_short_syntax --show-run-process ~/Sites/xinminlabs/synvert-core-ruby
+$ synvert-ruby -r factory_bot/use_short_syntax --show-run-process ~/Sites/synvert-hq/synvert-core-ruby
 ```
 
 #### Generate a snippet

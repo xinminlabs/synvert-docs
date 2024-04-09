@@ -18,7 +18,7 @@ We are developing [Synvert](https://synvert.net), a tool for writing ruby code t
 
 Initially, we simply iterated through the AST and compared node values. However, we recognized the need for a more powerful querying mechanism. This led us to create a node query language, inspired by CSS, as an example: `.class[name!=ApplicationRecord][parent_class=ActiveRecord::Base]` to query all class nodes whose name is not ApplicationRecord and parent class is ActiveRecord::Base. We implemented this feature using Rex and Racc, which proved to be a perfect fit for building this node query language.
 
-Now we have built [node-query-ruby](https://github.com/xinminlabs/node-query-ruby), which is a ruby implementation of node query language. In the upcoming episodes, we'll be sharing our knowledge on how to build this node query language.
+Now we have built [node-query-ruby](https://github.com/synvert-hq/node-query-ruby), which is a ruby implementation of node query language. In the upcoming episodes, we'll be sharing our knowledge on how to build this node query language.
 
 ## Set up Rex and Racc
 

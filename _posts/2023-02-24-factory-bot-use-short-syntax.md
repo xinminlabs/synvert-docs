@@ -77,4 +77,4 @@ Let's we search again.
 
 Now it works for all FactoryBot methods, and we can replace them all.
 
-The official snippet is [here](https://github.com/xinminlabs/synvert-snippets-ruby/blob/main/lib/factory_bot/use_short_syntax.rb), it also inserts `include FactoryBot::Syntax::Methods` statement.
+The official snippet is [here](https://github.com/synvert-hq/synvert-snippets-ruby/blob/main/lib/factory_bot/use_short_syntax.rb), it also inserts `include FactoryBot::Syntax::Methods` statement.

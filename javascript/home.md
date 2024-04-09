@@ -4,11 +4,11 @@ title: synvert-javascript
 redirect_to: /
 ---
 
-[synvert-javascript](https://github.com/xinminlabs/synvert-javascript) is a command tool to rewrite javascript code automatically, it depends on `synvert-core-javascript` and `synvert-snippets-javascript`.
+[synvert-javascript](https://github.com/synvert-hq/synvert-javascript) is a command tool to rewrite javascript code automatically, it depends on `synvert-core-javascript` and `synvert-snippets-javascript`.
 
-[synvert-core-javascript](https://github.com/xinminlabs/synvert-core-javascript) provides a set of DSLs to rewrite javascript code.
+[synvert-core-javascript](https://github.com/synvert-hq/synvert-core-javascript) provides a set of DSLs to rewrite javascript code.
 
-[synvert-snippets-javascript](https://github.com/xinminlabs/synvert-snippets-javascript) provides official snippets to
+[synvert-snippets-javascript](https://github.com/synvert-hq/synvert-snippets-javascript) provides official snippets to
 rewrite javascript code.
 
 Here is an example of synvert snippet.
@@ -101,7 +101,7 @@ OPTIONS
 
 #### Sync snippets
 
-[Official Snippets](https://github.com/xinminlabs/synvert-snippets-javascript) are available on github,
+[Official Snippets](https://github.com/synvert-hq/synvert-snippets-javascript) are available on github,
 you can sync them any time you want.
 
 ```
@@ -137,9 +137,9 @@ $ synvert-javascript -r jquery/migrate
 Load custom snippet
 
 ```
-$ synvert-javascript --load https://raw.githubusercontent.com/xinminlabs/synvert-snippets-javascript/master/lib/javascript/no-useless-constructor.js --run javascript/no-useless-constructor
+$ synvert-javascript --load https://raw.githubusercontent.com/synvert-hq/synvert-snippets-javascript/master/lib/javascript/no-useless-constructor.js --run javascript/no-useless-constructor
 
-$ synvert-javascript --load ~/Sites/xinminlabs/synvert-snippets-javascript/lib/javascript/no-useless-constructor.js --run jquery/no-useless-constructor
+$ synvert-javascript --load ~/Sites/synvert-hq/synvert-snippets-javascript/lib/javascript/no-useless-constructor.js --run jquery/no-useless-constructor
 ```
 
 Show processing files when running a snippet.

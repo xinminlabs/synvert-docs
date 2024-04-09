@@ -149,4 +149,4 @@ If you want to support more field types, just add more patterns to the `PATTERNS
   ];
 ```
 
-The official snippet is [here](https://github.com/xinminlabs/synvert-snippets-javascript/blob/main/lib/react/add-autocomplete-attribute.js), it takes care of the input tag and uses `insertAfter` for multi-line Fields.
+The official snippet is [here](https://github.com/synvert-hq/synvert-snippets-javascript/blob/main/lib/react/add-autocomplete-attribute.js), it takes care of the input tag and uses `insertAfter` for multi-line Fields.

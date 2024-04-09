@@ -27,41 +27,41 @@ title: Synvert
 
 It defines a NQL (node query language) and node rules to query AST nodes.
 
-The ruby version is [here](https://github.com/xinminlabs/node-query-ruby){:target="_blank"}.
+The ruby version is [here](https://github.com/synvert-hq/node-query-ruby){:target="_blank"}.
 
-The javascript/typescript version is [here](https://github.com/xinminlabs/node-query-javascript){:target="_blank"}.
+The javascript/typescript version is [here](https://github.com/synvert-hq/node-query-javascript){:target="_blank"}.
 
 ## Node Mutation
 
 It provides a set of APIs to rewrite AST node source code.
 
-The ruby version is [here](https://github.com/xinminlabs/node-mutation-ruby){:target="_blank"}.
+The ruby version is [here](https://github.com/synvert-hq/node-mutation-ruby){:target="_blank"}.
 
-The javascript/typescript version is [here](https://github.com/xinminlabs/node-mutation-javascript){:target="_blank"}.
+The javascript/typescript version is [here](https://github.com/synvert-hq/node-mutation-javascript){:target="_blank"}.
 
 ## Synvert Core
 
 Synvert core makes use of node query and node mutation to define a set of DSLs to query and rewrite code.
 
-The ruby version is [here](https://github.com/xinminlabs/synvert-core-ruby){:target="_blank"}.
+The ruby version is [here](https://github.com/synvert-hq/synvert-core-ruby){:target="_blank"}.
 
-The javascript/typescript version is [here](https://github.com/xinminlabs/synvert-core-javascript){:target="_blank"}.
+The javascript/typescript version is [here](https://github.com/synvert-hq/synvert-core-javascript){:target="_blank"}.
 
 ## Synvert Snippets
 
 Synvert snippets use the synvert core DSLs to define how to fine AST nodes and how to rewrite the AST node source code.
 
-The ruby version is [here](https://github.com/xinminlabs/synvert-snippets-ruby){:target="_blank"}.
+The ruby version is [here](https://github.com/synvert-hq/synvert-snippets-ruby){:target="_blank"}.
 
-The javascript/typescript version is [here](https://github.com/xinminlabs/synvert-snippets-javascript){:target="_blank"}.
+The javascript/typescript version is [here](https://github.com/synvert-hq/synvert-snippets-javascript){:target="_blank"}.
 
 ## Synvert CLI
 
 Synvert CLI is a command line tool to run the synvert snippet to rewrite the source code.
 
-The ruby version is [here](https://github.com/xinminlabs/synvert-ruby){:target="_blank"}.
+The ruby version is [here](https://github.com/synvert-hq/synvert-ruby){:target="_blank"}.
 
-The javascript/typescript version is [here](https://github.com/xinminlabs/synvert-javascript){:target="_blank"}.
+The javascript/typescript version is [here](https://github.com/synvert-hq/synvert-javascript){:target="_blank"}.
 
 ## Synvert API
 

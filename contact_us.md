@@ -7,4 +7,4 @@ Feel free to contact us about anything. We love receiving feedback from users!
 
 [support@synvert.net](mailto:support@synvert.net)
 
-Or you can post an issue on [github](https://github.com/xinminlabs/synvert/issues){:target="_blank"}.
+Or you can post an issue on [github](https://github.com/synvert-hq/synvert/issues){:target="_blank"}.

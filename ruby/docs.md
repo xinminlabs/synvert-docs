@@ -51,7 +51,7 @@ $ synvert-ruby --run rspec/use_new_syntax ~/Sites/xinminlabs/awesomecode.io
 Run a snippet from remote url
 
 ```
-$ synvert-ruby --run https://raw.githubusercontent.com/xinminlabs/synvert-snippets-ruby/master/lib/rspec/use_new_syntax.rb ~/Sites/xinminlabs/awesomecode.io
+$ synvert-ruby --run https://raw.githubusercontent.com/synvert-hq/synvert-snippets-ruby/master/lib/rspec/use_new_syntax.rb ~/Sites/xinminlabs/awesomecode.io
 ```
 
 Run a snippet from local file path
@@ -75,7 +75,7 @@ $ synvert-ruby --run rspec/use_new_syntax --only-paths app/models/ ~/Sites/xinmi
 Show processing files when running a snippet.
 
 ```
-$ synvert-ruby --run rspec/use_new_syntax --show-run-process ~/Sites/xinminlabs/synvert-core-ruby
+$ synvert-ruby --run rspec/use_new_syntax --show-run-process ~/Sites/synvert-hq/synvert-core-ruby
 ```
 
 ## Synvert Snippet
@@ -111,43 +111,43 @@ for each controller file, it finds the `render nothing: true` code and replace w
 
 ### APIs
 
-[synvert-core](https://github.com/xinminlabs/synvert-core-ruby) provides a set of APIs to query and mutate code based on AST nodes.
+[synvert-core](https://github.com/synvert-hq/synvert-core-ruby) provides a set of APIs to query and mutate code based on AST nodes.
 
 #### General APIs
 
-* [description](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter.html#description-instance_method) - describe what the snippet does
+* [description](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter.html#description-instance_method) - describe what the snippet does
 
 ```ruby
 description 'describe what the snippet does'
 ```
 
-* [if_ruby](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter.html#if_ruby-instance_method) - check if ruby version is greater than or equal to the specified ruby version
+* [if_ruby](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter.html#if_ruby-instance_method) - check if ruby version is greater than or equal to the specified ruby version
 
 ```ruby
 if_ruby '3.0.0'
 ```
 
-* [if_gem](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter.html#if_gem-instance_method) - compare version of specified gem
+* [if_gem](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter.html#if_gem-instance_method) - compare version of specified gem
 
 ```ruby
 if_gem 'rails', '~> 6.0.0'
 ```
 
-* [within_files](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter.html#within_files-instance_method) - find specified files
+* [within_files](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter.html#within_files-instance_method) - find specified files
 
 ```ruby
 within_files 'spec/**/*_spec.rb' do
 end
 ```
 
-* [within_file](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter.html#within_file-instance_method) - alias to within_files
+* [within_file](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter.html#within_file-instance_method) - alias to within_files
 
 ```ruby
 within_file 'spec/spec_helper.rb' do
 end
 ```
 
-* [add_file](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter.html#add_file-instance_method) - add a new file
+* [add_file](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter.html#add_file-instance_method) - add a new file
 
 ```ruby
 add_file 'app/models/application_record.rb', <<~EOS
@@ -157,22 +157,22 @@ add_file 'app/models/application_record.rb', <<~EOS
 EOS
 ```
 
-* [remove_file](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter.html#remove_file-instance_method) - remove a file
+* [remove_file](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter.html#remove_file-instance_method) - remove a file
 
 ```ruby
 remove_file 'config/initializers/secret_token.rb'
 ```
 
-* [add_snippet](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter.html#add_snippet-instance_method) - call another rewriter
+* [add_snippet](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter.html#add_snippet-instance_method) - call another rewriter
 
 ```ruby
 add_snippet 'minitest', 'assert_empty'
 add_snippet 'minitest/assert_instance_of'
 add_snippet '/Users/flyerhzm/.synvert-ruby/lib/minitest/assert_match.rb'
-add_snippet 'https://github.com/xinminlabs/synvert-snippets-ruby/blob/main/lib/minitest/assert_silent.rb'
+add_snippet 'https://github.com/synvert-hq/synvert-snippets-ruby/blob/main/lib/minitest/assert_silent.rb'
 ```
 
-* [helper_method](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter.html#helper_method-instance_method) - define a helper method
+* [helper_method](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter.html#helper_method-instance_method) - define a helper method
 
 ```ruby
 helper_method :extract_controller_action_name do |hash_node|
@@ -190,13 +190,13 @@ within_file Synvert::RAILS_ROUTE_FILES do
 end
 ```
 
-* [redo_until_no_change](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter.html#redo_until_no_change-instance_method) - run the snippet until no change
+* [redo_until_no_change](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter.html#redo_until_no_change-instance_method) - run the snippet until no change
 
 #### Scope APIs
 
 You can use scope apis to find the matching nodes or move to the specified node.
 
-* [within_node](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#within_node-instance_method) - recursively find matching ast nodes
+* [within_node](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#within_node-instance_method) - recursively find matching ast nodes
 
 ```ruby
 # head status: 406
@@ -204,8 +204,8 @@ with_node type: 'send', receiver: nil, message: 'head', arguments: { size: 1, '0
 end
 ```
 
-* [with_node](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#with_node-instance_method) - alias to within_node
-* [find_node](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#find_node-instance_method) - alias to within_node
+* [with_node](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#with_node-instance_method) - alias to within_node
+* [find_node](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#find_node-instance_method) - alias to within_node
 
 ```ruby
 # head status: 406
@@ -213,7 +213,7 @@ find_node '.send[receiver=nil][message=head][arguments.size=1][arguments.0=.hash
 end
 ```
 
-* [goto_node](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#goto_node-instance_method) - go to a child node
+* [goto_node](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#goto_node-instance_method) - go to a child node
 
 ```ruby
 # head status: 406
@@ -227,7 +227,7 @@ end
 
 You can use condition apis to check if the current node matches the rules.
 
-* [if_exist_node](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#if_exist_node-instance_method) - check if matching node exist in the child nodes
+* [if_exist_node](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#if_exist_node-instance_method) - check if matching node exist in the child nodes
 
 ```ruby
 # Klass.any_instance.should_receive(:message)
@@ -237,7 +237,7 @@ with_node type: 'send', message: 'should_receive' do
 end
 ```
 
-* [unless_exist_node](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#unless_exist_node-instance_method) - check if matching node doesn't exist in the child nodes
+* [unless_exist_node](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#unless_exist_node-instance_method) - check if matching node doesn't exist in the child nodes
 
 ```ruby
 # obj.should_receive(:message)
@@ -247,7 +247,7 @@ with_node type: 'send', message: 'should_receive' do
 end
 ```
 
-* [if_only_exist_node](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#if_only_exist_node-instance_method) - check if current node has only one child node and the child node matches
+* [if_only_exist_node](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#if_only_exist_node-instance_method) - check if current node has only one child node and the child node matches
 
 ```ruby
 # it { should matcher }
@@ -261,7 +261,7 @@ end
 
 You can use action apis to rewrite the source code.
 
-* [append](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#append-instance_method) - append the code to the bottom of current node body
+* [append](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#append-instance_method) - append the code to the bottom of current node body
 
 ```ruby
 # def teardown
@@ -277,7 +277,7 @@ find_node '.class[parent_class=Minitest::Test] .def[name=teardown]:not_has(> .su
 end
 ```
 
-* [prepend](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#prepend-instance_method) - prepend the code to the bottom of current node body
+* [prepend](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#prepend-instance_method) - prepend the code to the bottom of current node body
 
 ```ruby
 # def setup
@@ -293,7 +293,7 @@ find_node '.class[parent_class=Minitest::Test] .def[name=setup]:not_has(> .super
 end
 ```
 
-* [indent](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#indent-instance_method) - indent code
+* [indent](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#indent-instance_method) - indent code
   * option `tab_size`, default is 1
 
 ```ruby
@@ -307,7 +307,7 @@ find_node '.class' do
 end
 ```
 
-* [insert](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#insert-instance_method) - insert code
+* [insert](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#insert-instance_method) - insert code
   * option `at`, `beginning` or `end` (default), insert code at the beginning or end of the current node
   * option `to`, insert code to the child node of the current node
   * option `add_comma`, `true` or `false` (default), add extra comma
@@ -339,7 +339,7 @@ find_node '.send[message=test][arguments.size=1][arguments.first=foo]' do
 end
 ```
 
-* [insert_after](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#insert_after-instance_method) - insert the code next to the current node
+* [insert_after](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#insert_after-instance_method) - insert the code next to the current node
   * option `add_comma`, `true` or `false` (default), add extra comma
 
 ```ruby
@@ -352,7 +352,7 @@ with_node type: 'send', message: 'secret_token=' do
 end{% endraw %}
 ```
 
-* [insert_before](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#insert_before-instance_method) - insert the code previous to the current node
+* [insert_before](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#insert_before-instance_method) - insert the code previous to the current node
   * option `add_comma`, `true` or `false` (default), add extra comma
 
 ```ruby
@@ -365,7 +365,7 @@ with_node type: 'send', message: 'secret_token=' do
 end{% endraw %}
 ```
 
-* [replace](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#replace-instance_method) - replace the code of specified child nodes
+* [replace](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#replace-instance_method) - replace the code of specified child nodes
 
 ```ruby
 # Post.paginated_each do |post|
@@ -387,7 +387,7 @@ with_node type: 'send', message: 'to', arguments: { first: { type: 'send', messa
 end{% endraw %}
 ```
 
-* [delete](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#delete-instance_method) - delete the code in the specified child nodes
+* [delete](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#delete-instance_method) - delete the code in the specified child nodes
   * *selectors, selector names of child node.
   * option `add_comma`, `true` or `false` (default), delete extra comma
 
@@ -402,7 +402,7 @@ find_node '.send[receiver=FactoryBot][message IN (create build)]' do
 end
 ```
 
-* [remove](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#remove-instance_method) - remove the whole code of current node.
+* [remove](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#remove-instance_method) - remove the whole code of current node.
   * option `add_comma`, `true` or `false` (default), delete extra comma
 
 ```ruby
@@ -412,7 +412,7 @@ find_node '.send[receiver=nil][message IN (puts p)]' do
 end
 ```
 
-* [wrap](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#wrap-instance_method) - wrap the current node with prefix and suffix code.
+* [wrap](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#wrap-instance_method) - wrap the current node with prefix and suffix code.
 
 ```ruby
 # class Bar < Base
@@ -427,7 +427,7 @@ find_node '.class[name=Bar]' do
 end
 ```
 
-* [replace_with](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#replace_with-instance_method) - replace the whole code of current node
+* [replace_with](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#replace_with-instance_method) - replace the whole code of current node
 
 ```ruby
 {% raw %}# errors[:base] = "author not present"
@@ -438,9 +438,9 @@ with_node type: 'send', receiver: 'errors', message: '[]=' do
 end{% endraw %}
 ```
 
-* [warn](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#warn-instance_method) - warn message
+* [warn](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#warn-instance_method) - warn message
 
-* [replace_erb_stmt_with_expr](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#replace_erb_stmt_with_expr-instance_method) - replace erb stmt code to expr code
+* [replace_erb_stmt_with_expr](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#replace_erb_stmt_with_expr-instance_method) - replace erb stmt code to expr code
 
 ```ruby
 # <% form_for post do |f| %>
@@ -453,13 +453,13 @@ with_node type: 'block', caller: { type: 'send', receiver: nil, message: { in: %
 end
 ```
 
-* [noop](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#noop-instance_method) - no operation
+* [noop](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#noop-instance_method) - no operation
 
 #### Attributes
 
-* [file_path](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#file_path-instance_method) - current file path
-* [node](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#node-instance_method) - current ast node
-* [mutation_adapter](https://xinminlabs.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#mutation_adapter-instance_method) - [mutation adapter](https://xinminlabs.github.io/node-mutation-ruby/NodeMutation/Adapter.html) to get some helper methods
+* [file_path](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#file_path-instance_method) - current file path
+* [node](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#node-instance_method) - current ast node
+* [mutation_adapter](https://synvert-hq.github.io/synvert-core-ruby/Synvert/Core/Rewriter/Instance.html#mutation_adapter-instance_method) - [mutation adapter](https://synvert-hq.github.io/node-mutation-ruby/NodeMutation/Adapter.html) to get some helper methods
 
 ### Query Nodes
 

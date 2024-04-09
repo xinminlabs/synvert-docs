@@ -58,7 +58,7 @@ $.ajax({
 
 Synvert is not capable of automatically generating a snippet for this particular complexity, which means that we will need to craft the snippet manually.
 
-Let's navigate to the synvert-snippets-javascript repository, if you don't have it yet, you can clone it from [github](https://github.com/xinminlabs/synvert-snippets-javascript)
+Let's navigate to the synvert-snippets-javascript repository, if you don't have it yet, you can clone it from [github](https://github.com/synvert-hq/synvert-snippets-javascript)
 
 ```bash
 cd synvert-snippets-javascript

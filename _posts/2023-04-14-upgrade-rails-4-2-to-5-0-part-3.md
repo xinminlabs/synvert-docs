@@ -28,7 +28,7 @@ after_destroy_commit :remove_from_index_later
 
 It's cleaner. Let's write a snippet to upgrade the code.
 
-First, nagivate to the synvert-snippet-ruby repository, if you don't have it yet, you can clone it from [github](https://github.com/xinminlabs/synvert-snippets-ruby)
+First, nagivate to the synvert-snippet-ruby repository, if you don't have it yet, you can clone it from [github](https://github.com/synvert-hq/synvert-snippets-ruby)
 
 ```bash
 cd synvert-snippets-ruby
