@@ -14,8 +14,7 @@ description:      'write snippet code to rewrite your source code.'
 url:              https://synvert.net
 
 author:
-  name:           'Richard Huang'
-  url:            https://huangzhimin.com
+  name:           'Synvert'
 
 plugins:
   - jekyll-redirect-from
