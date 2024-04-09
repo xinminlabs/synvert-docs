@@ -24,7 +24,6 @@ plugins:
 exclude:
   - Gemfile*
   - README.md
-  - deploy.sh
   - Dockerfile.prod
   - docker-nginx.conf
   - _compress_images_cache.yml
