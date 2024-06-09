@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Launch of upgradecode.io: Simplify Your Code Upgrades!"
-date: 2024-05-12
+date: 2024-05-27
 categories: ruby
 permalink: /:categories/launch-of-upgradecode-io-simplify-your-code-upgrades/index.html
 ---
