@@ -1,25 +1,22 @@
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
   <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-  <meta name="description" content="{{ site.title }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta name="description" content="{{ site.title }}" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/favicon-16x16.png">
-  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/favicon-16x16.png" />
+  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" />
 
   <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} &middot; {{ site.tagline }}
-    {% else %}
-      {{ page.title }} &middot; {{ site.title }}
-    {% endif %}
+    {% if page.title == "Home" %} {{ site.title }} &middot; {{ site.tagline }} {% else %} {{ page.title }} &middot; {{
+    site.title }} {% endif %}
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/simple.min.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/highlight.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/custom.css?bust={{ site.time | date: '%s' }}">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/simple.min.css" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/highlight.css" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/custom.css?bust={{ site.time | date: '%s' }}" />
 </head>
